@@ -1,0 +1,55 @@
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+
+.header {
+    height: 50px;
+    width: 100%;
+    z-index: 2;
+    background-color: blue;
+    color: white;
+}
+
+.sidebar {
+    position: relative;
+    left: 0;
+    height: auto;
+    background-color: rgb(244, 244, 255);
+    color: white;
+    font-weight: 700;
+}
+
+
+/* .sidebar li {
+  height: 50px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+} */
+
+.home {
+    position: relative;
+    top: 0;
+    height: 100vh;
+    background-color: rgb(218, 145, 145);
+}
+
+button {
+    font-weight: 700;
+    background-color: blue;
+}
+
+button:hover {
+    color: yellow
+}
+
+li {
+    font-weight: 700;
+    color: white;
+    background-color: blue;
+}
+
+li:hover {
+    color: yellow
+}

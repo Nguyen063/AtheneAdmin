@@ -1,0 +1,68 @@
+<div class="container">
+    <br/>
+    <!-- // Neu khong chinh mau nut thi gom btn1 len tren -->
+    <div class="row">
+        <div class="button-container">
+            <button type="button" class="btn--1">Delete</button>
+            <button type="button" class="btn--1">Confirm</button>
+            <button type="button" class="btn--1">Choose All</button>
+        </div>
+    </div>
+
+    <br/>
+    <br/>
+
+    <div class="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ReqID</th>
+                    <th scope="col">Loai TK</th>
+                    <th scope="col-2">Ten</th>
+                    <th scope="col">SDT</th>
+                    <th scope="col">Tinh Trang</th>
+                    <th scope="col">View </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>
+                        <input type="checkbox" /> Id
+                    </th>
+                    <td>Gia su</td>
+                    <td>Huong Ham Chi</td>
+                    <td>23456789</td>
+                    <td>Chua xac thuc Otto</td>
+                    <td>
+                        <button type="button" class="" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        View Detail
+                      </button>
+                        <div class="modal-dialog modal-dialog-scrollable">
+                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="staticBackdropLabel">Day la tieu de</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Noi dung ơ day
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                                            <button type="button" class="btn btn-secondary">Gửi phản hồi</button>
+                                            <button type="button" class="btn btn-secondary">Chấp nhận</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </td>
+                </tr>
+
+
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+.button-container {
+    display: flex;
+    flex-wrap: no-wrap;
+    justify-content: space-around;
+    width: 40vw;
+}
+
+.btn--1 {
+    width: 150px;
+    color: white;
+    background-color: #17D482;
+    font-weight: 700;
+    border-radius: 20px;
+    font: roboto;
+    border: none;
+}
+
+.btn--1:hover {
+    background-color: red;
+    color: black;
+}
