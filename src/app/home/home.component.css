@@ -1,3 +1,8 @@
+/* * {
+    margin: 0px;
+    padding: 0px;
+} */
+
 .header {
     height: 50px;
     width: 100%;
@@ -5,7 +10,6 @@
     background-color: #0077C0;
     color: white;
     position: fixed;
-    top: 0;
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-start;
@@ -28,8 +32,7 @@ img-logo {
 
 .sidebar {
     position: relative;
-    left: 0;
-    height: auto;
+    height: 100vh;
     background-color: #004C7A;
     color: white;
     font-weight: 700;
@@ -37,9 +40,10 @@ img-logo {
 
 .home {
     position: relative;
-    margin: 0;
-    padding: 0;
     height: 100vh;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
     /* background-color: rgb(218, 145, 145); */
 }
 
