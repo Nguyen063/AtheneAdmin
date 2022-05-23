@@ -1,6 +1,6 @@
-table {
-    /* vertical-align: middle; */
-    text-align: center;
+* {
+    margin: 0px;
+    padding: 0px;
 }
 
 .button-container {
@@ -20,17 +20,23 @@ table {
     border: none;
 }
 
+.btn--1:hover {
+    background-color: #e63d3d;
+}
+
+.btn--2:hover {
+    background-color: #026f40;
+}
+
+.btn--3:hover {
+    background-color: #0658d3;
+}
+
 .btn_view--detail {
     background-color: rgba(255, 255, 255, 0);
     border: none;
-    font-weight: 400;
+    font-weight: 700;
     color: blue;
-}
-
-.btn_dropdown {
-    background-color: rgba(255, 255, 255, 0);
-    border: none;
-    font-weight: 500;
 }
 
 ul {

@@ -1,7 +1,7 @@
-/* * {
+* {
     margin: 0px;
     padding: 0px;
-} */
+}
 
 .header {
     height: 50px;
@@ -12,11 +12,11 @@
     position: fixed;
     display: flex;
     flex-wrap: nowrap;
-    justify-content: flex-start;
+    justify-content: space-between;
 }
 
-.header__item--left {
-    width: 250px;
+.header_item {
+    width: 300px;
     line-height: 50px;
 }
 
@@ -32,10 +32,11 @@ img-logo {
 
 .sidebar {
     position: relative;
-    height: 100vh;
+    height: calc(100vh - 50px);
     background-color: #004C7A;
     color: white;
-    font-weight: 700;
+    font-weight: 400;
+    padding: 0px 5px;
 }
 
 .home {
@@ -57,10 +58,12 @@ img-logo {
 }
 
 button {
-    font-weight: 700;
+    font-weight: 500;
     background-color: rgb(255, 255, 255, 0);
     text-align: left;
     border: none;
+    /* margin: 10px; */
+    padding: 10px 0px;
 }
 
 button:hover {
@@ -69,17 +72,27 @@ button:hover {
 }
 
 li {
-    font-weight: 700;
+    font-weight: 500;
     color: white;
     text-align: left;
     background-color: rgb(255, 255, 255, 0);
     margin-left: 10px;
     border: none;
+    padding: 10px;
 }
 
 li:hover {
     color: yellow;
+    cursor: pointer;
     /* background-color: rgb(255, 215, 129); */
+}
+
+.search_header {
+    background-color: rgb(0, 0, 0, 0);
+    color: white;
+    margin: 5px;
+    height: 30px;
+    border: none;
 }
 
 

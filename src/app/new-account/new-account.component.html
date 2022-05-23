@@ -1,39 +1,38 @@
 <div class="container">
     <div class="row">
-
-        <div class="dropdown">
-            <button class="dropdown-toggle btn_dropdown" type="button" data-bs-target="#LTK" data-bs-toggle="dropdown" aria-expanded="false">
-            Loại tài khoản
-          </button>
-            <ul class="dropdown-menu" id="LTK">
-                <li class="dropdown-toggle"><span class="dropdown-item" href="#">Gia sư</span></li>
-                <li class="dropdown-toggle"><span class="dropdown-item" href="#">Học viên</span></li>
-            </ul>
+        <div class="button-container">
+            <button type="button" class="btn--0 btn--1">Delete</button>
+            <button type="button" class="btn--0 btn--2">Confirm</button>
+            <button type="button" class="btn--0 btn--3">Choose All</button>
         </div>
-
     </div>
     <div class="row">
         <table class="table">
             <thead>
                 <tr>
-
-                    <th scope="col">UserID</th>
+                    <th scope="col"></th>
+                    <th scope="col">ReqID</th>
                     <th scope="col">Loại tài khoản</th>
                     <th scope="col">Tên</th>
-                    <th scope="col">Lượt truy cập</th>
+                    <th scope="col">Số điện thoại</th>
+                    <th scope="col">Tình trạng</th>
                     <th scope="col">View </th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
+                    <th>
+                        <input type="checkbox" />
+                    </th>
                     <td>Id</td>
                     <td>Gia sư</td>
                     <td>Hứa Hàm Chi</td>
-                    <td>50 lần </td>
+                    <td>23456789</td>
+                    <td>Chua xac thuc Otto</td>
                     <td>
                         <button type="button" class="btn_view--detail" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                  View Detail
-                </button>
+                    View Detail
+                  </button>
                         <div class="modal-dialog modal-dialog-scrollable">
                             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                                 <div class="modal-dialog">

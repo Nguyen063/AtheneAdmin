@@ -1,37 +1,41 @@
 <div class="container">
     <div class="row">
-        <div class="button-container">
-            <button type="button" class="btn--0 btn--1">Delete</button>
-            <button type="button" class="btn--0 btn--2">Confirm</button>
-            <button type="button" class="btn--0 btn--3">Choose All</button>
+
+        <div class="dropdown">
+            <button class="dropdown-toggle btn_dropdown" type="button" data-bs-target="#LTK" data-bs-toggle="dropdown" aria-expanded="false">
+          Loại tài khoản
+        </button>
+            <ul class="dropdown-menu" id="LTK">
+                <li class="dropdown-toggle"><span class="dropdown-item" href="#">Gia sư</span></li>
+                <li class="dropdown-toggle"><span class="dropdown-item" href="#">Học viên</span></li>
+            </ul>
         </div>
+
     </div>
-
-    <br/>
-    <br/>
-
     <div class="row">
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">ReqID</th>
-                    <th scope="col">Loai TK</th>
-                    <th scope="col">User Req</th>
-                    <th scope="col">User Match</th>
+                    <th></th>
+                    <th scope="col">ClassID</th>
+                    <th scope="col">Grade</th>
+                    <th scope="col">Subject</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">View </th>
+                    <th scope="col"> </th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <th>
-                        <input type="checkbox" /> Id
-                    </th>
-                    <td>Gia su</td>
-                    <td>Huong Ham Chi</td>
-                    <td>10</td>
+                    <td> <input type="checkbox" /></td>
+                    <td>Id</td>
+                    <td>4</td>
+                    <td>Báo bài</td>
+                    <td>Đang hoạt động</td>
                     <td>
                         <button type="button" class="btn_view--detail" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                          <i class="bi bi-check-circle-fill"></i>
-                  </button>
+                View Detail
+              </button>
                         <div class="modal-dialog modal-dialog-scrollable">
                             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                                 <div class="modal-dialog">
@@ -41,7 +45,32 @@
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-
+                                            <div class="Information--1">
+                                                <div class="Information--item">
+                                                    <img class="img-pop-up" src="#">
+                                                </div>
+                                                <div class="profile--1">
+                                                    <ul>
+                                                        <li>Loại tài khoản: Gia sư</li>
+                                                        <li>Họ tên: Hứa Hàm Chi</li>
+                                                        <li>Giới tính</li>
+                                                        <li>Nghề nghiệp</li>
+                                                        <li>DOB</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="profile--1">
+                                                <div>
+                                                    <ul>
+                                                        <li>Địa chỉ</li>
+                                                        <li>Số căn cước công dân</li>
+                                                        <li>Sinh viên trường:</li>
+                                                        <li>Chuyên ngành</li>
+                                                        <li>Kinh nghiệm</li>
+                                                        <li>Bằng cấp khác</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
@@ -55,28 +84,8 @@
                     </td>
                     <td>
                         <button type="button" class="btn_view--detail" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                          <i class="bi bi-trash-fill"></i>
-                </button>
-                        <div class="modal-dialog modal-dialog-scrollable">
-                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="staticBackdropLabel">Day la tieu de</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
-                                            <button type="button" class="btn btn-secondary">Gửi phản hồi</button>
-                                            <button type="button" class="btn btn-secondary">Chấp nhận</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <i class="bi bi-trash-fill"></i>
+              </button>
                     </td>
                 </tr>
             </tbody>

@@ -11,44 +11,21 @@
     font-weight: 700;
     border-radius: 20px;
     font: roboto;
+    background-color: #17D482;
     border: none;
-}
-
-.btn--1 {
-    color: white;
-    background-color: #e61c1c;
-}
-
-.btn--1:hover {
-    background-color: red;
-    color: black;
-}
-
-.btn--2 {
-    color: white;
-    background-color: #04d87c;
-}
-
-.btn--2:hover {
-    background-color: #05bd6d;
-    color: black;
-}
-
-.btn--3 {
-    color: white;
-    background-color: #f99933;
-}
-
-.btn--3:hover {
-    background-color: #b66207;
-    color: black;
 }
 
 .btn_view--detail {
     background-color: rgba(255, 255, 255, 0);
     border: none;
-    font-weight: 700;
+    font-weight: 400;
     color: blue;
+}
+
+.btn_dropdown {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    font-weight: 500;
 }
 
 ul {
@@ -76,5 +53,5 @@ ul {
 
 
 /* .profile--1 {
-    margin-left: 20px;
+margin-left: 20px;
 } */
