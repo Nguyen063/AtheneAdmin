@@ -1,1 +1,70 @@
-/* You can add global styles to this file, and also import other style files */
+/* .button-container {
+    display: flex;
+    flex-wrap: no-wrap;
+    justify-content: space-around;
+    width: 40vw;
+}
+
+.btn--0 {
+    width: 150px;
+    color: white;
+    font-weight: 700;
+    border-radius: 20px;
+    font: roboto;
+    background-color: #17D482;
+    border: none;
+}
+
+.btn_view--detail {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    font-weight: 400;
+    color: blue;
+}
+
+.btn_dropdown {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    font-weight: 500;
+}
+
+.Information--1 {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.Information--item {
+    width: auto;
+}
+
+.img-pop-up {
+    width: 120px;
+    height: 150px;
+    margin-left: 30px;
+}
+
+.form-control {
+    width: 200px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    margin-left: auto;
+    background-color: #B2CDE2;
+} */
+
+
+/* .fixed {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+} */
+
+.form-control {
+    width: 200px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    margin-left: auto;
+    background-color: #B2CDE2;
+}

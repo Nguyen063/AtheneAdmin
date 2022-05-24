@@ -1,0 +1,47 @@
+.form-control {
+    width: 220px;
+    margin-right: 0rem;
+    margin-left: auto;
+    background-color: #B2CDE2;
+    border-radius: 0.4rem;
+    padding: 5px;
+    height: 35px;
+}
+
+h5 {
+    line-height: 50px;
+}
+
+.container--blogs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.blogs--item {
+    width: 18rem;
+    height: auto;
+    background-color: #C4C4C4;
+}
+
+.img {
+    padding: 0.5rem;
+    width: 10rem;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-right {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+    margin-right: 1rem;
+}
+
+.btn {
+    border: none;
+    background-color: rgb(255, 255, 255, 0);
+    font-weight: 500;
+}

@@ -1,0 +1,91 @@
+* {
+    margin: 0px 0px;
+    padding: 0px;
+}
+
+.header {
+    height: 50px;
+    width: 100vw;
+    z-index: 2;
+    background-color: #0077C0;
+    color: white;
+    position: fixed;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.header_item {
+    width: 300px;
+    line-height: 50px;
+    color: #C7EEFF;
+    font-weight: 500;
+}
+
+.img-logo {
+    width: 30px;
+    height: auto;
+    padding: 10px;
+}
+
+h4 {
+    margin-top: 100px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.form_container {
+    margin-top: 3.5rem;
+}
+
+.form__control {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 2.2rem;
+    margin-top: 1rem;
+}
+
+.form__control-2 {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 2rem;
+}
+
+.form__label {
+    width: 10rem;
+}
+
+.form__input {
+    width: 20rem;
+    background-color: #D6FDFF;
+    border-radius: 0.2rem;
+    border: 0.1rem rgb(53, 28, 28);
+}
+
+.button_submit {
+    text-align: center;
+    background-color: #0077C0;
+    font-weight: 500;
+    color: white;
+    margin-top: 3rem;
+    padding: 0.2rem 1rem;
+}
+
+.hide_password {
+    position: relative;
+    margin-left: -1rem;
+    z-index: 2;
+    vertical-align: middle;
+}
+
+.button_forget {
+    text-align: right;
+    background-color: rgb(255, 255, 255, 0);
+    border: none;
+    font-weight: 300;
+    width: 30rem;
+}

@@ -11,9 +11,11 @@ import { NewAccountComponent } from './new-account/new-account.component';
 import { NewClassComponent } from './new-class/new-class.component';
 import { UpdateWebsiteComponent } from './update-website/update-website.component';
 import { UpdateBlogComponent } from './update-blog/update-blog.component';
-import { SystermNotificationsComponent } from './systerm-notifications/systerm-notifications.component';
 import { FeedbackComponent } from './feedback/feedback.component';
-import { XdNotificationsComponent } from './xd-notifications/xd-notifications.component';
+import { InforTutorComponent } from './infor-tutor/infor-tutor.component';
+import { InforLearnerComponent } from './infor-learner/infor-learner.component';
+import { ClassDetailComponent } from './class-detail/class-detail.component';
+import { TransationManagermentComponent } from './transation-managerment/transation-managerment.component';
 
 @NgModule({
   declarations: [
@@ -26,9 +28,11 @@ import { XdNotificationsComponent } from './xd-notifications/xd-notifications.co
     NewClassComponent,
     UpdateWebsiteComponent,
     UpdateBlogComponent,
-    SystermNotificationsComponent,
     FeedbackComponent,
-    XdNotificationsComponent
+    InforTutorComponent,
+    InforLearnerComponent,
+    ClassDetailComponent,
+    TransationManagermentComponent
   ],
   imports: [
     BrowserModule,
