@@ -13,20 +13,42 @@
         </div>
     </div>
 
+    <!-- <div class="blog-right">
+        <b style="font-weight: bold; margin-left:3rem; font-size: 1.4rem;">Tin tức</b>
+        <div class="row mb-3 mt-3 item" *ngFor="let p of blogs" class="{{isSelect(p) ? 'selected' : ''}}" (click)="onSelect(p)">
+            <div class="col-sm-4">
+                <img class="img-responsive" src="http://localhost:3000/{{p.thumbPath}}">
+            </div>
+            <div class="col-sm-8 ml-1 p-3">
+                <h5 class="fw-bold">{{p.name}}</h5>
+                <p id="author">{{p.author}}</p>
+                <div class="content-item ">
+                    <p>{{p.content}}</p>
+                    <h6>{{p.title1}}</h6>
+                    <p>{{p.content1}}</p>
+                    <h6>{{p.title2}}</h6>
+                    <p>{{p.content2}}</p>
+                    <h5>{{p.title3}}</h5>
+                    <p>{{p.content3}}</p>
+                </div>
+            </div>
+        </div>
+    </div> -->
     <div class="row container--blogs container-fluid">
-        <div class="blogs--item">
-            <img class="img" src="#">
-            <h5 class="">
-                Đây là tiêu đề
-            </h5>
-            <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.</p>
-            <div style="text-align:right">
-                <button class="btn">
-                <i class="bi bi-hand-thumbs-up-fill"> </i>
-              </button>
-                <button class="btn"><i class="bi bi-hand-thumbs-down-fill"></i></button>
+        <div class="row" style="padding: 1rem 2rem">
+            <div class=" col-md-3 blog-content blogs--item" *ngFor="let p of blogs " class="{{isSelect(p) ? 'selected' : ''}} " (click)="onSelect(p) ">
+                <img class="img" src="http://localhost:3000/{{p.thumbPath}} ">
+                <h6 class="fw-bold title">{{p.name}}</h6>
+                <div id="author">{{p.author}}</div>
+                <div class="content-item">
+                    {{p.content}}
+                </div>
+
+                <div style="text-align:right; ">
+                    <button class="btn "><i class="bi bi-hand-thumbs-up-fill "> </i></button>
+                    <button class="btn "><i class="bi bi-hand-thumbs-down-fill "></i></button>
+                </div>
             </div>
         </div>
     </div>
-
 </div>

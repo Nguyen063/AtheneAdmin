@@ -16,7 +16,10 @@ import { InforTutorComponent } from './infor-tutor/infor-tutor.component';
 import { InforLearnerComponent } from './infor-learner/infor-learner.component';
 import { ClassDetailComponent } from './class-detail/class-detail.component';
 import { TransationManagermentComponent } from './transation-managerment/transation-managerment.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr';
+import { BlogDetailComponent } from './blog-detail/blog-detail.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     InforLearnerComponent,
     ClassDetailComponent,
     TransationManagermentComponent,
-    DashboardComponent
+    BlogDetailComponent
   ],
   imports: [
     BrowserModule,
