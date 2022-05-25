@@ -19,13 +19,36 @@ h5 {
 }
 
 .blogs--item {
-    width: 18rem;
-    height: auto;
-    background-color: #C4C4C4;
+    /* background-color: #C4C4C4; */
+    background-color: #cccccc;
+    border-radius: 10px;
+    margin: 0 2rem 3rem 2.5rem;
+    height: 17rem;
+}
+
+#author {
+    color: #8D7676;
+    margin-top: 0px;
+    font-weight: 500;
+}
+
+.content-item {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: wrap;
+    height: 3rem;
+}
+
+.title {
+    text-transform: lowercase;
+}
+
+.title:first-letter {
+    text-transform: uppercase;
 }
 
 .img {
-    padding: 0.5rem;
+    padding: 0.4rem;
     width: 10rem;
     height: auto;
     display: block;

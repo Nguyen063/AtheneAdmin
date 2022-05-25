@@ -9,6 +9,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { UpdateWebsiteComponent } from './update-website/update-website.component';
 import { NgModule } from '@angular/core';
 import { TransationManagermentComponent } from './transation-managerment/transation-managerment.component';
+import { BlogDetailComponent } from './blog-detail/blog-detail.component';
 const routes: Routes = [
   {
     path:'class-manager', component : ClassManagermentComponent
@@ -30,6 +31,9 @@ const routes: Routes = [
   },
   {
     path:'update-blog', component: UpdateBlogComponent
+  },
+  {
+    path:'update-blog/:id', component: BlogDetailComponent
   },
   {
     path:'update-website', component: UpdateWebsiteComponent
