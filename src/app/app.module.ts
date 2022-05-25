@@ -16,6 +16,7 @@ import { InforTutorComponent } from './infor-tutor/infor-tutor.component';
 import { InforLearnerComponent } from './infor-learner/infor-learner.component';
 import { ClassDetailComponent } from './class-detail/class-detail.component';
 import { TransationManagermentComponent } from './transation-managerment/transation-managerment.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -32,11 +33,21 @@ import { TransationManagermentComponent } from './transation-managerment/transat
     InforTutorComponent,
     InforLearnerComponent,
     ClassDetailComponent,
-    TransationManagermentComponent
+    TransationManagermentComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,  HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    ToastrModule.forRoot({
+      timeOut: 3000,
+      progressBar: true,
+      progressAnimation:"increasing",
+      preventDuplicates: true
+
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
