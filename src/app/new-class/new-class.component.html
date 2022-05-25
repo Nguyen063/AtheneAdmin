@@ -1,9 +1,21 @@
 <div class="container">
     <div class="row">
-        <div class="button-container">
-            <button type="button" class="btn--0 btn--1">Delete</button>
-            <button type="button" class="btn--0 btn--2">Confirm</button>
-            <button type="button" class="btn--0 btn--3">Choose All</button>
+
+        <div class="col-6">
+            <h5>Xét duyệt yêu cầu tạo lớp mới</h5>
+            <div class="button-container">
+                <button type="button" class="btn--0 btn--1">Delete</button>
+                <button type="button" class="btn--0 btn--2">Confirm</button>
+                <button type="button" class="btn--0 btn--3">Choose All</button>
+            </div>
+        </div>
+        <div class="col-6">
+            <form class="d-flex ">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            </form>
+            <div class="button-container">
+                <button type="button" class="btn"><span style="font-weight: 500">8 </span> &nbsp; Yêu cầu chờ được duyệt</button>
+            </div>
         </div>
     </div>
     <div class="row">
@@ -34,7 +46,7 @@
                     </td>
                     <td>
                         <button type="button" class="btn_view--detail" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                        <i class="bi bi-trash-fill"></i>
+                          <i class="bi bi-trash-fill"></i>
               </button>
                     </td>
                 </tr>

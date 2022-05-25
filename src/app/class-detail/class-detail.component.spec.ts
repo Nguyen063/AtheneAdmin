@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { XdNotificationsComponent } from './xd-notifications.component';
+import { ClassDetailComponent } from './class-detail.component';
 
-describe('XdNotificationsComponent', () => {
-  let component: XdNotificationsComponent;
-  let fixture: ComponentFixture<XdNotificationsComponent>;
+describe('ClassDetailComponent', () => {
+  let component: ClassDetailComponent;
+  let fixture: ComponentFixture<ClassDetailComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ XdNotificationsComponent ]
+      declarations: [ ClassDetailComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(XdNotificationsComponent);
+    fixture = TestBed.createComponent(ClassDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

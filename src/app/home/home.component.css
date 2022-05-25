@@ -5,7 +5,7 @@
 
 .header {
     height: 50px;
-    width: 100%;
+    width: 100vw;
     z-index: 2;
     background-color: #0077C0;
     color: white;
@@ -20,7 +20,7 @@
     line-height: 50px;
 }
 
-img-logo {
+.img-logo {
     width: 30px;
     height: auto;
     padding: 10px;
@@ -32,7 +32,7 @@ img-logo {
 
 .sidebar {
     position: relative;
-    height: calc(100vh - 50px);
+    height: calc(100vh);
     background-color: #004C7A;
     color: white;
     font-weight: 400;
@@ -42,10 +42,8 @@ img-logo {
 .home {
     position: relative;
     height: 100vh;
-    width: 100%;
     margin: 0px;
     padding: 0px;
-    /* background-color: rgb(218, 145, 145); */
 }
 
 .form-control {
@@ -62,13 +60,11 @@ button {
     background-color: rgb(255, 255, 255, 0);
     text-align: left;
     border: none;
-    /* margin: 10px; */
     padding: 10px 0px;
 }
 
 button:hover {
     color: yellow;
-    /* background-color: rgb(248, 183, 43); */
 }
 
 li {
@@ -84,7 +80,6 @@ li {
 li:hover {
     color: yellow;
     cursor: pointer;
-    /* background-color: rgb(255, 215, 129); */
 }
 
 .search_header {
@@ -102,7 +97,7 @@ li:hover {
 /* .sidebar {
     position: fixed;
     top: 0;
-    left: 0;
+    left: -250px;
     height: 100%;
     width: 200px;
     padding: 10px;
@@ -111,8 +106,39 @@ li:hover {
     z-index: 10;
 }
 
+.sidebar.show {
+    left: 0px;
+}
+
 .sidebar.close {
     width: 50px;
+}
+
+.btn {
+    position: absolute;
+    top: 15px;
+    left: 45px;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    background: #1b1b1b;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: left 0.4s ease;
+}
+
+.btn.click {
+    left: 260px;
+}
+
+.btn span {
+    color: white;
+    font-size: 28px;
+    line-height: 45px;
+}
+
+.btn.click span:before {
+    content: '\f00d';
 }
 
 li {
