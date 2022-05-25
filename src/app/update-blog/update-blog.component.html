@@ -8,7 +8,75 @@
                 <input class="form-control" type="search" placeholder="Search" aria-label="Search">
             </form>
             <div class="container-fluid btn-right">
-                <button type="button" class="btn"><i class="bi bi-plus-circle-fill"></i> Thêm bài viết </button>
+
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn_add" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <i class="bi bi-plus-circle-fill"></i> Thêm bài viết
+</button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body container-title">
+                                <!-- Tên bài viết -->
+                                <div class="title">
+                                    <input type="text" class="" placeholder="Nhập tên bài viết">
+                                </div>
+
+                                <!-- Nội dung 1 -->
+                                <div class="title">
+                                    <div>
+                                        <input type="text" class="" placeholder="Nhập tiêu đề 1">
+                                    </div>
+                                    <div>
+                                        <textarea cols="50" type="text" class="" placeholder="Nhập nội dung 1"></textarea>
+                                    </div>
+                                    <div>
+                                        <input type="file" class="form">
+                                    </div>
+                                </div>
+
+                                <!-- Nội dung 2 -->
+                                <div class="title">
+                                    <div>
+                                        <input type="text" class="" placeholder="Nhập tiêu đề 2">
+                                    </div>
+                                    <div>
+                                        <textarea cols="50" type="text" class="" placeholder="Nhập nội dung 2"></textarea>
+                                    </div>
+                                    <div>
+                                        <input type="file">
+                                    </div>
+                                </div>
+
+                                <!-- Nội dung 3 -->
+                                <div class="title">
+                                    <div>
+                                        <input type="text" class="" placeholder="Nhập tiêu đề 3">
+                                    </div>
+                                    <div>
+                                        <textarea cols="50" type="text" class="" placeholder="Nhập nội dung 3"></textarea>
+                                    </div>
+                                    <div>
+                                        <input type="file">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

@@ -63,8 +63,23 @@ h5 {
     margin-right: 1rem;
 }
 
-.btn {
+.btn_add {
     border: none;
     background-color: rgb(255, 255, 255, 0);
     font-weight: 500;
 }
+
+label,
+input,
+textarea {
+    width: 100%;
+    margin: 0.5rem 0rem;
+    background-color: #B2CDE2;
+    border: none;
+}
+
+
+/*
+.container-title {
+    background-color: #8D7676;
+} */
