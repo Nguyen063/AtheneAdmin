@@ -44,7 +44,6 @@ export class UpdateBlogComponent implements OnInit {
    
   }
   submitData(form: NgForm){
- 
     if(this.blog._id==""){
       this._service.postBlog(this.blog).subscribe(res=>{
         let resData=JSON.parse(JSON.stringify(res));
@@ -54,10 +53,19 @@ export class UpdateBlogComponent implements OnInit {
         } else{
           alert("Fail!")
         }
-      })
-    }
-  }
+      });this.onReset(form);
+      this.getBlogs();
+      } else{
+      alert("Fail!")
+      }
+      }
+       
+      onReset(form?: NgForm){
+      if(form)
+      form.reset();
+      this.blog=new Blog();
+      }
+      }
+      
  
-
-}
   
