@@ -44,8 +44,25 @@ export class UpdateBlogComponent implements OnInit {
    
   }
   submitData(form: NgForm){
-    if(this.blog._id==""){
-      this._service.postBlog(this.blog).subscribe(res=>{
+
+let formBlog=new FormData();
+formBlog.append('name',form.value.name);
+formBlog.append('id',form.value.id);
+formBlog.append('author',form.value.author);
+formBlog.append('content',form.value.content);
+formBlog.append('title1',form.value.title1);
+formBlog.append('content1',form.value.content1);
+formBlog.append('title2',form.value.title2);
+formBlog.append('content2',form.value.content2);
+formBlog.append('title3',form.value.title3);
+formBlog.append('content3',form.value.content3);
+formBlog.append('thumbPath',this.file);
+// formBlog.append('thumbPath1',this.file);
+// formBlog.append('thumbPath2',this.file);
+
+
+
+      this._service.postBlog(formBlog).subscribe(res=>{
         let resData=JSON.parse(JSON.stringify(res));
         if(resData.message ==="Success"){
           this._toast.success("Insert successfully!","Insert")
@@ -53,12 +70,10 @@ export class UpdateBlogComponent implements OnInit {
         } else{
           alert("Fail!")
         }
-      });this.onReset(form);
+      });
+      this.onReset(form);
       this.getBlogs();
-      } else{
-      alert("Fail!")
-      }
-      }
+    }
        
       onReset(form?: NgForm){
       if(form)

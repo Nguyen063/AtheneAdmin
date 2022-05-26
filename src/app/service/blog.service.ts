@@ -21,7 +21,7 @@ export class BlogService {
   }
 
 
-  postBlog(data: Blog){
+  postBlog(data: any){
 return this._http.post(`${baseUrl}/update-blog`,data)
   }
 

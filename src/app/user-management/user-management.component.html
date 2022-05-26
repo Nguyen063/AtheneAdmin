@@ -17,8 +17,6 @@
                 <input class="form-control" type="search" placeholder="Search" aria-label="Search">
             </form>
         </div>
-
-
     </div>
     <div class="row">
         <table class="table">
@@ -33,10 +31,22 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Id</td>
-                    <td>Gia sư</td>
-                    <td>Hứa Hàm Chi</td>
+                <tr *ngFor="let l of learners">
+                    <td>{{l.TutorManage.UserID}}</td>
+                    <td>{{l.TutorManage.Role}}</td>
+                    <td>{{l.TutorInfo.Name}}</td>
+                    <td>50 lần </td>
+                    <td>
+                        <button type="button" class="btn_view--detail" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                  View Detail
+                </button>
+
+                    </td>
+                </tr>
+                <tr *ngFor="let t of tutors">
+                    <td>{{t.LearnerManage.UserID}}</td>
+                    <td>{{t.LearnerManage.Role}}</td>
+                    <td>{{t.LearnerInfo.Name}}</td>
                     <td>50 lần </td>
                     <td>
                         <button type="button" class="btn_view--detail" data-bs-toggle="modal" data-bs-target="#staticBackdrop">

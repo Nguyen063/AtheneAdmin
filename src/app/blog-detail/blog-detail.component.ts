@@ -5,6 +5,7 @@ import { BlogService } from '../service/blog.service';
 import {ToastrService} from 'ngx-toastr'
 import { NgForm } from '@angular/forms';
 
+
 @Component({
   selector: 'app-blog-detail',
   templateUrl: './blog-detail.component.html',
@@ -101,6 +102,7 @@ this._toast.warning("Delete successfully!","Delete",{
   progressBar:false
 });this.onReset(form);
 this.getBlogs();
+this._router.navigateByUrl('/update-blog');
 } else{
 alert("Fail!")
 }
