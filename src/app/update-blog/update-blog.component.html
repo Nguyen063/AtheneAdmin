@@ -20,59 +20,65 @@
                     <div class="modal-dialog modal-dialog-scrollable">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                <h5 class="modal-title" id="exampleModalLabel">Thêm blog mới</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body container-title">
-                                <!-- Tên bài viết -->
-                                <div class="title">
-                                    <input type="text" class="" placeholder="Nhập tên bài viết">
-                                </div>
+                                <form #blogForm="ngForm" (ngSubmit)="submitData(blogForm)">
+                                    <!-- Tên bài viết -->
+                                    <div class="title">
+                                        <input type="text" id="name" class="" placeholder="Nhập tên bài viết" [(ngModel)]="blog['name']" name="name">
+                                        <input type="text" id="id" class="" placeholder="Nhập ID bài viết" [(ngModel)]="blog['id']" name="id">
+                                        <input type="text" id="author" class="" placeholder="Nhập tên tác giả" [(ngModel)]="blog['author']" name="author">
+                                    </div>
 
-                                <!-- Nội dung 1 -->
-                                <div class="title">
-                                    <div>
-                                        <input type="text" class="" placeholder="Nhập tiêu đề 1">
+                                    <!-- Nội dung 1 -->
+                                    <div class="title">
+                                        <div>
+                                            <input type="text" id="title1" class="" placeholder="Nhập tiêu đề 1" [(ngModel)]="blog['title1']" name="title1">
+                                        </div>
+                                        <div>
+                                            <textarea cols="50" id="content1" type="text" class="" placeholder="Nhập nội dung 1" [(ngModel)]="blog['content1']" name="content1"></textarea>
+                                        </div>
+                                        <div>
+                                            <input type="file" class="form" [(ngModel)]="blog['thumbPath']" name="thumbPath" (change)="onChange($event)">
+                                        </div>
                                     </div>
-                                    <div>
-                                        <textarea cols="50" type="text" class="" placeholder="Nhập nội dung 1"></textarea>
-                                    </div>
-                                    <div>
-                                        <input type="file" class="form">
-                                    </div>
-                                </div>
 
-                                <!-- Nội dung 2 -->
-                                <div class="title">
-                                    <div>
-                                        <input type="text" class="" placeholder="Nhập tiêu đề 2">
+                                    <!-- Nội dung 2 -->
+                                    <div class="title">
+                                        <div>
+                                            <input type="text" id="title2" class="" placeholder="Nhập tiêu đề 2" [(ngModel)]="blog['title2']" name="title2">
+                                        </div>
+                                        <div>
+                                            <textarea cols="50" id="content2" type="text" class="" placeholder="Nhập nội dung 2" [(ngModel)]="blog['content2']" name="content2"></textarea>
+                                        </div>
+                                        <div>
+                                            <input type="file" [(ngModel)]="blog['thumbPath1']" name="thumbPath1" (change)="onChange($event)">
+                                        </div>
                                     </div>
-                                    <div>
-                                        <textarea cols="50" type="text" class="" placeholder="Nhập nội dung 2"></textarea>
-                                    </div>
-                                    <div>
-                                        <input type="file">
-                                    </div>
-                                </div>
 
-                                <!-- Nội dung 3 -->
-                                <div class="title">
-                                    <div>
-                                        <input type="text" class="" placeholder="Nhập tiêu đề 3">
+                                    <!-- Nội dung 3 -->
+                                    <div class="title">
+                                        <div>
+                                            <input type="text" id="title3" class="" placeholder="Nhập tiêu đề 3" [(ngModel)]="blog['title3']" name="title3">
+                                        </div>
+                                        <div>
+                                            <textarea cols="50" id="content3" type="text" class="" placeholder="Nhập nội dung 3" [(ngModel)]="blog['content3']" name="content3"></textarea>
+                                        </div>
+                                        <div>
+                                            <input type="file" [(ngModel)]="blog['thumbPath2']" name="thumbPath2" (change)="onChange($event)">
+                                        </div>
+
                                     </div>
-                                    <div>
-                                        <textarea cols="50" type="text" class="" placeholder="Nhập nội dung 3"></textarea>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-primary">Save changes</button>
                                     </div>
-                                    <div>
-                                        <input type="file">
-                                    </div>
-                                </div>
+                                </form>
 
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -81,27 +87,6 @@
         </div>
     </div>
 
-    <!-- <div class="blog-right">
-        <b style="font-weight: bold; margin-left:3rem; font-size: 1.4rem;">Tin tức</b>
-        <div class="row mb-3 mt-3 item" *ngFor="let p of blogs" class="{{isSelect(p) ? 'selected' : ''}}" (click)="onSelect(p)">
-            <div class="col-sm-4">
-                <img class="img-responsive" src="http://localhost:3000/{{p.thumbPath}}">
-            </div>
-            <div class="col-sm-8 ml-1 p-3">
-                <h5 class="fw-bold">{{p.name}}</h5>
-                <p id="author">{{p.author}}</p>
-                <div class="content-item ">
-                    <p>{{p.content}}</p>
-                    <h6>{{p.title1}}</h6>
-                    <p>{{p.content1}}</p>
-                    <h6>{{p.title2}}</h6>
-                    <p>{{p.content2}}</p>
-                    <h5>{{p.title3}}</h5>
-                    <p>{{p.content3}}</p>
-                </div>
-            </div>
-        </div>
-    </div> -->
     <div class="row container--blogs container-fluid">
         <div class="row" style="padding: 1rem 2rem">
             <div class=" col-md-3 blog-content blogs--item" *ngFor="let p of blogs " class="{{isSelect(p) ? 'selected' : ''}} " (click)="onSelect(p) ">
@@ -113,7 +98,7 @@
                 </div>
 
                 <div style="text-align:right; ">
-                    <button class="btn "><i class="bi bi-hand-thumbs-up-fill "> </i></button>
+                    <button class="btn"><i class="bi bi-hand-thumbs-up-fill "> </i>Delete</button>
                     <button class="btn "><i class="bi bi-hand-thumbs-down-fill "></i></button>
                 </div>
             </div>

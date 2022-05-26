@@ -1,5 +1,6 @@
 export class Blog{
-    _id: any;
+  _id:any;
+    id: string;
     name: string;
     author: string;
     content: string;
@@ -13,7 +14,8 @@ export class Blog{
     title3: string;
     content3: string;
     constructor(){
-        this._id="";
+      this._id="";
+        this.id="";
         this.name="";
         this.author="";
         this.content="";

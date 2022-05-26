@@ -16,7 +16,7 @@ export class UpdateBlogComponent implements OnInit {
   blogs: any;
   errMessage: string="";
   blog: Blog=new Blog();
-
+ file:any=null;
     constructor(private _service: BlogService, private _toast:ToastrService , private _router: Router) { }
   
     ngOnInit(): void {
@@ -35,9 +35,16 @@ export class UpdateBlogComponent implements OnInit {
   isSelect(data:any){
     return data.id===this.selectedId;
   }
- 
+  onChange(event:any){
+    if(event.target.files.length>0){ // console.log("File info:", event.target.files[0])
+      this.file=event.target.files[0];}
+      else{
+        this.file=null;
+      }
+   
+  }
   submitData(form: NgForm){
-  
+ 
     if(this.blog._id==""){
       this._service.postBlog(this.blog).subscribe(res=>{
         let resData=JSON.parse(JSON.stringify(res));
@@ -48,48 +55,9 @@ export class UpdateBlogComponent implements OnInit {
           alert("Fail!")
         }
       })
-    
     }
-    else{
-      this._service.updateBlog(this.blog._id, this.blog).subscribe(res => {
-        let resData=JSON.parse(JSON.stringify(res));
-        if(resData.message ==="Success"){
-          this._toast.info("Update successfully!","Update")
-          this.getBlogs();
-        } else{
-          alert("Fail!")
-        }
-      })
-    }
-    
   }
+ 
+
+}
   
-  edit(data: Blog){
-    this.blog=data;
-  }
-  delete(id:any, form:NgForm){
-    if(confirm("Are you sure you want to delete this product?")== true){
-    this._service.deleteBlog(id).subscribe(res=>{
-      let resData=JSON.parse(JSON.stringify(res));
-      if(resData.message==="Success"){
-  this._toast.warning("Delete successfully!","Delete",{
-    timeOut: 5000,
-    progressBar:false
-  })
-  this.onReset(form);
-          this.getBlogs();
-        } else{
-          alert("Fail!")
-        }
-      }
-    )
-    
-    }
-  }
-  
-  onReset(form?: NgForm){
-    if(form)
-    form.reset();
-    this.blog=new Blog();
-  }
-  }

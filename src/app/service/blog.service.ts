@@ -29,7 +29,8 @@ return this._http.post(`${baseUrl}/update-blog`,data)
     return this._http.patch(`${baseUrl}/${id}`,data)
   }
   deleteBlog(id:any){
-    return this._http.delete(`${baseUrl}/${id}`);
+    return this._http.delete(`${baseUrl}/update-blog/${id}`);
+     
   }
   handleError(error: HttpErrorResponse){
     return throwError(()=>{new Error(error.message)})
