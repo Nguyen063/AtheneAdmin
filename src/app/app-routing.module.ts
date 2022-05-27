@@ -10,6 +10,9 @@ import { UpdateWebsiteComponent } from './update-website/update-website.componen
 import { NgModule } from '@angular/core';
 import { TransationManagermentComponent } from './transation-managerment/transation-managerment.component';
 import { BlogDetailComponent } from './blog-detail/blog-detail.component';
+import { InforLearnerComponent } from './infor-learner/infor-learner.component';
+import { InforTutorComponent } from './infor-tutor/infor-tutor.component';
+import { ClassDetailComponent } from './class-detail/class-detail.component';
 const routes: Routes = [
   {
     path:'class-manager', component : ClassManagermentComponent
@@ -41,6 +44,15 @@ const routes: Routes = [
   {
     path:'feedback', component:FeedbackComponent
   },
+  {
+    path:'infor-learner', component: InforLearnerComponent
+  },
+  {
+    path:'infor-tutor', component: InforTutorComponent
+  },
+  {
+    path:'class-detail', component: ClassDetailComponent
+  }
 ];
 
 @NgModule({
@@ -52,4 +64,4 @@ export class AppRoutingModule { }
 export const Routingcomonents={ClassManagermentComponent, HomeComponent,
    NewAccountComponent, NewClassComponent,TransationManagermentComponent,
     UpdateBlogComponent,UpdateWebsiteComponent, UserManagementComponent,
-  FeedbackComponent}
+  FeedbackComponent, InforLearnerComponent,InforTutorComponent, ClassDetailComponent}
