@@ -50,9 +50,12 @@ const routes: Routes = [
   {
     path:'infor-tutor', component: InforTutorComponent
   },
+  // {
+  //   path:'class-detail', component: ClassDetailComponent
+  // },  
   {
-    path:'class-detail', component: ClassDetailComponent
-  }
+    path:'class-manager/:id', component : ClassDetailComponent
+  },
 ];
 
 @NgModule({
