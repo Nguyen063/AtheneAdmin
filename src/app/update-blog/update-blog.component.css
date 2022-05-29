@@ -8,8 +8,13 @@
     height: 35px;
 }
 
+
 h5 {
     line-height: 50px;
+}
+.container{
+    padding-right: 0;
+    padding-left: 0;
 }
 
 .container--blogs {
@@ -19,11 +24,14 @@ h5 {
 }
 
 .blogs--item {
-    /* background-color: #C4C4C4; */
     background-color: #cccccc;
     border-radius: 10px;
-    margin: 0 2rem 3rem 2.5rem;
-    height: 17rem;
+    margin: 0 3% 3rem 3%;
+    height: 25vw;
+}
+
+.blogs-img{
+    width: fit-content;
 }
 
 #author {
@@ -47,13 +55,18 @@ h5 {
     text-transform: uppercase;
 }
 
+.row{
+    --bs-gutter-x: 0;
+}
+
 .img {
     padding: 0.4rem;
-    width: 10rem;
+    width: 10em;
     height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    min-width: 120px;
 }
 
 .btn-right {
@@ -77,9 +90,3 @@ textarea {
     background-color: #B2CDE2;
     border: none;
 }
-
-
-/*
-.container-title {
-    background-color: #8D7676;
-} */

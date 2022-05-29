@@ -25,12 +25,12 @@
         <div class="" *ngFor="let f of feedbacks">
             <div class="container--user">
                 <div>
-                    <p class="p--1">{{f.Name}}</p>
+                    <p class="p--1 mt-2">{{f.Name}}</p>
                     <p class="p--2">{{f.DateSend|date:"dd/MM/yyyy"}}</p>
                 </div>
                 <button class="btn">Lưu trữ</button>
                 <div class="feedback--item">
-                    <p>{{f.Content}}</p>
+                    <p class="feedback-content">{{f.Content}}</p>
                     <div style="text-align:right">
                         <button class="btn">
                     Phản hồi
