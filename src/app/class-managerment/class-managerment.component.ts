@@ -41,7 +41,6 @@ errMessage: string=""
     progressBar:false
   });
   this.getClass();
-  // this._router.navigateByUrl('/update-blog');
   } else{
   alert("Fail!")
   }
