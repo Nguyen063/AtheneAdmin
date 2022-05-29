@@ -11,5 +11,11 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  RpMenu(){
+    const elemen2t = document.querySelector('.sidebar');
+   elemen2t?.classList.toggle('active');
+   const element = document.querySelector('.home');
+   element?.classList.toggle('active');
+  }
 }
+

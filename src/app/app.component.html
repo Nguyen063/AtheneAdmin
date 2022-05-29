@@ -1,20 +1,86 @@
-<!-- Header -->
-<div class="row">
-    <div class="header">
-        <div class="header_item">
-            <img class="img-logo" id="logo" src="#" alt="Logo" />
-            <span>ATHENE</span>
-        </div>
-        <div class="header_item">
-            <i class="bi bi-search"></i> <input class="search_header" type="search" placeholder="Search" />
+<div>
+    <div class="row">
+        <div class="header">
+            <div class="header_item">
+                <img class="img-logo" id="logo" src="#" alt="Logo" />
+                <span>ATHENE</span>
+            </div>
+            <div class="header_item">
+                <i class="bi bi-search"></i> <input class="search_header" type="search" placeholder="Search" />
+            </div>
         </div>
     </div>
-</div>
-<div class="row body-container" [ngStyle]="{'margin-top': '3rem'}">
-    <div class="col-2" style="margin:0px; padding: 0px;">
-        <app-home></app-home>
-    </div>
-    <div class="col-10 home container-fluid overflow-auto">
-        <router-outlet></router-outlet>
+
+    <!-- SIDEBAR -->
+
+    <div>
+        <div class="sidebar overflow-auto" [ngStyle]="{'margin-top': '3rem'}">
+            <!-- Dashboard -->
+            <div>
+                <div>
+                    <button class="container-fluid btn_nav" style="margin-top:10px;" type="button" data-bs-toggle="collapse" data-bs-target="#dashboard" aria-expanded="false" routerLink="/dashboard" routerLinkActive="active"> Dashboard </button>
+                </div>
+            </div>
+
+            <!-- Quản lý -->
+            <div>
+                <button class="container-fluid btn_nav" type="button" data-bs-toggle="collapse" data-bs-target="#manage" aria-expanded="false"> Quản lý </button>
+                <ul class="list-group collapse" id="manage">
+                    <li class="list-group-item">
+                        <span routerLink="/user-manager" routerLinkActive="active"> Tài khoản user</span>
+                    </li>
+                    <li class="list-group-item">
+                        <span routerLink="/class-manager" routerLinkActive="active">Lớp học</span>
+                    </li>
+                    <li class="list-group-item">
+                        <span routerLink="/transation-managerment" routerLinkActive="active">Giao dịch</span>
+                    </li>
+                    <li class="list-group-item">
+                        <span routerLink="/feedback" routerLinkActive="active">Feedback</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Xét duyệt -->
+
+            <div>
+                <button class="container-fluid btn_nav" type="button" data-bs-toggle="collapse" data-bs-target="#approval" aria-expanded="false"> Xét duyệt
+                </button>
+                <ul class="list-group collapse" id="approval">
+                    <li class="list-group-item">
+                        <span routerLink="/new-account" routerLinkActive="active">Tài khoản mới</span>
+                    </li>
+                    <li class="list-group-item">
+                        <span routerLink="/new-class" routerLinkActive="active">Yêu cầu tạo lớp mới</span>
+
+                    </li>
+                </ul>
+            </div>
+            <!-- Cập nhật nội dung -->
+            <div>
+                <button class="container-fluid btn_nav" type="button" data-bs-toggle="collapse" data-bs-target="#Update" aria-expanded="false"> Cập nhật nội dung
+              </button>
+
+                <ul class="list-group collapse" id="Update">
+                    <li class="list-group-item">
+                        <span routerLink="/update-website" routerLinkActive="active"> Thông tin website</span>
+
+                    </li>
+                    <li class="list-group-item">
+                        <span routerLink="/update-blog" routerLinkActive="active">Blog</span>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="content" [ngStyle]="{'margin-top': '3rem'}">
+            <div class="btn-menu">
+                <span (click)="RpMenu()"><i class="bi bi-list"></i></span>
+            </div>
+            <div>
+                <router-outlet></router-outlet>
+            </div>
+
+        </div>
     </div>
 </div>

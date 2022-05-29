@@ -37,7 +37,7 @@ import { BlogDetailComponent } from './blog-detail/blog-detail.component';
     InforLearnerComponent,
     ClassDetailComponent,
     TransationManagermentComponent,
-    BlogDetailComponent
+    BlogDetailComponent,
   ],
   imports: [
     BrowserModule,

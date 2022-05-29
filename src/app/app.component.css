@@ -1,11 +1,6 @@
-* {
-    font-size: 1.3vw;
-    margin-right: 0;
-}
-
 .header {
     height: 50px;
-    width: 100vw;
+    width: 100%;
     z-index: 2;
     background-color: #0077C0;
     color: white;
@@ -13,6 +8,7 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
+    left: 0px;
 }
 
 .header_item {
@@ -30,6 +26,99 @@
     background-color: rgb(0, 0, 0, 0);
     color: white;
     margin: 5px;
-    height: 30px;
+    height: 1.5rem;
     border: none;
+}
+
+
+/* SIDEBAR */
+
+.sidebar {
+    position: fixed;
+    background-color: #004C7A;
+    color: white;
+    font-weight: 400;
+    left: 0rem;
+    position: fixed;
+    width: 13rem;
+    height: 100vh;
+}
+
+.sidebar.active {
+    left: 130rem;
+    width: 100%
+}
+
+.content {
+    position: absolute;
+    left: 13rem;
+    height: 100vh;
+    width: calc(100% - 13rem);
+    background-color: white;
+}
+
+.content.active {
+    width: 100%;
+    left: 0px;
+}
+
+.img-logo {
+    width: 2rem;
+    height: auto;
+    padding: 0.8rem;
+}
+
+.form-control {
+    width: 12rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    margin-left: auto;
+    background-color: #B2CDE2;
+}
+
+.btn_nav {
+    font-weight: 500;
+    background-color: rgb(255, 255, 255, 0);
+    text-align: left;
+    border: none;
+    padding: 0.8rem 0.5rem;
+    color: white;
+    /* display: block;
+  text-decoration: none; */
+}
+
+.btn_nav:hover {
+    color: yellow;
+}
+
+li {
+    font-weight: 500;
+    color: white;
+    text-align: left;
+    background-color: rgb(255, 255, 255, 0);
+    margin-left: 0.4rem;
+    border: none;
+}
+
+li:hover {
+    color: yellow;
+    cursor: pointer;
+}
+
+.btn-menu {
+    position: fixed;
+    color: rgb(0, 0, 0);
+    background-color: rgb(208, 121, 7);
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: -1.5rem;
+}
+
+.btn-menu:hover {
+    cursor: pointer;
+}
+
+.btn-menu.active {
+    margin-left: 0rem;
 }
