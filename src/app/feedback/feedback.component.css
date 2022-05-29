@@ -7,9 +7,14 @@
     padding: 5px;
     height: 35px;
 }
-
+.feedback-content{
+    margin: 1.5% ;
+}
 h5 {
     line-height: 40px;
+}
+.container{
+    --bs-gutter-x: auto 0;
 }
 
 .container--user {
@@ -18,6 +23,9 @@ h5 {
     justify-content: space-between;
 }
 
+.row{
+    margin-right: 0;
+}
 .container--admin {
     margin-left: 10%;
     margin-top: 1rem;
@@ -41,7 +49,6 @@ h5 {
     background-color: rgb(255, 255, 255, 0);
     font-weight: 450;
     font-size: 0.8rem;
-    line-height: 2rem;
 }
 
 .p--1 {
