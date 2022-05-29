@@ -9,6 +9,10 @@ table {
     justify-content: flex-end;
 }
 
+div.row{
+    --bs-gutter-x: 0;
+}
+
 label {
     width: 8.5rem;
     color: white;
