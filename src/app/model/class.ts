@@ -28,6 +28,22 @@ export class Class{
         DOB: String,
         CCCD: String,
     });
+    TransLearner=Object({ 
+        TransID: String,
+        Fee: String,
+        SendAcc: String,
+        Content: String,
+       DateCreate:Date,
+        Method: String,
+    });
+    TransTutor=Object({ 
+        TransID: String,
+        Fee: String,
+        ReceivableAcc: String,
+        Content: String,
+       DateCreate:Date,
+        Method: String,
+    });
     
     constructor(){
         this.id="";
@@ -54,5 +70,18 @@ export class Class{
         this.ClassInfo.Fee="";
         this.ClassInfo.RetentionTime="";
 
+        this.TransLearner.TransID="";
+        this.TransLearner.Fee="";
+        this.TransLearner.SendAcc="";
+        this.TransLearner.Content="";
+        this.TransLearner.DateCreate="";
+        this.TransLearner.Method="";
+
+        this.TransTutor.TransID="";
+        this.TransTutor.Fee="";
+        this.TransTutor.ReceivableAcc="";
+        this.TransTutor.Content="";
+        this.TransTutor.DateCreate="";
+        this.TransTutor.Method="";
      }
 }

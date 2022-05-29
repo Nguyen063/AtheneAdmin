@@ -28,7 +28,13 @@ export class Learner{
         TotalClass: String,
         ClassID: String,
         Role: String,
-         })
+         });  TransTutor=Object({
+            TransID: String,
+            DateCreate: Date,
+            Fee: String,
+            Content: String,
+            ReceivableAcc: String,
+             })
     
     constructor(){
         this.TutorInfo.Name="";
@@ -57,6 +63,12 @@ export class Learner{
         this.TutorManage.TotalClass="";
         this.TutorManage.ClassID="";
         this.TutorManage.Role="";
+
+        this.TransTutor.TransID="";
+        this.TransTutor.DateCreate="";
+        this.TransTutor.Fee="";
+        this.TransTutor.ReceivableAcc="";
+        this.TransTutor.Content="";
 
      }
 }
@@ -89,6 +101,15 @@ export class Tutor{
            ClassID: String,
            Role: String,
             })
+
+            TransLearner=Object({
+                TransID: String,
+                DateCreate: Date,
+                Fee: String,
+                Content: String,
+                SendAcc: String,
+                 })
+        
     
      constructor( ){
       this.LearnerInfo.Name="";
@@ -114,5 +135,11 @@ export class Tutor{
              this.LearnerManage.TotalClass="";
              this.LearnerManage.ClassID="";
              this.LearnerManage.Role="";
+
+             this.TransLearner.TransID="";
+        this.TransLearner.DateCreate="";
+        this.TransLearner.Fee="";
+        this.TransLearner.SendAcc="";
+        this.TransLearner.Content="";
      }
 }

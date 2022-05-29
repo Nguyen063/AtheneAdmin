@@ -43,13 +43,13 @@ Trạng thái
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>190059149 </td>
-                    <td>Gửi tiền</td>
-                    <td>1.200.000</td>
-                    <td>Agribank 190000000000000</td>
-                    <td>BIDV 190000000000000</td>
-                    <td>Học phí tháng 5 Lớp 0001111 </td>
+                <tr *ngFor="let t of transactions">
+                    <td>{{t.TransInfo.TransId}}</td>
+                    <td>{{t.TransInfo.Method}}</td>
+                    <td>{{t.TransInfo.Fee}}</td>
+                    <td>{{t.SendAcc.Bank}} - {{t.SendAcc.STK}}</td>
+                    <td>{{t.ReceivableAcc.Bank}} -{{t.ReceivableAcc.STK}}</td>
+                    <td>{{t.TransInfo.Content}}</td>
                 </tr>
             </tbody>
         </table>

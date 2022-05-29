@@ -74,12 +74,20 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>190068686</td>
-                        <td>12/12/2021</td>
-                        <td>Gửi tiền</td>
-                        <td>12.000.000</td>
-                        <td>BIDV 1984214924129</td>
-                        <td>Học phí tháng 5 lớp:91827421894</td>
+                        <td>{{c.TransLearner.TransID}}</td>
+                        <td>{{c.TransLearner.DateCreate|date:"dd/MM/yyyy"}}</td>
+                        <td>{{c.TransLearner.Method}}</td>
+                        <td>{{c.TransLearner.Fee}}</td>
+                        <td>{{c.TransLearner.SendAcc}}</td>
+                        <td>{{c.TransLearner.Content}} {{c.ClassInfo.ClassID}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{c.TransTutor.TransID}}</td>
+                        <td>{{c.TransTutor.DateCreate|date:"dd/MM/yyyy"}}</td>
+                        <td>{{c.TransTutor.Method}}</td>
+                        <td>{{c.TransTutor.Fee}}</td>
+                        <td>{{c.TransTutor.ReceivableAcc}}</td>
+                        <td>{{c.TransTutor.Content}} {{c.ClassInfo.ClassID}}</td>
                     </tr>
 
                 </tbody>
