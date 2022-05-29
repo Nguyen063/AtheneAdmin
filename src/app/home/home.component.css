@@ -75,6 +75,10 @@ button:hover {
     color: yellow;
 }
 
+.row{
+    --bs-gutter-x: 0;
+}
+
 li {
     font-weight: 500;
     color: white;
@@ -96,7 +100,9 @@ li:hover {
     height: 30px;
     border: none;
 }
-
+div.container-fluid{
+    padding-left: 0;
+}
 @media screen and (max-width: 800px) {
     * {
         font-size: 12px;
