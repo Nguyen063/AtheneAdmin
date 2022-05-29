@@ -40,7 +40,7 @@ label:hover {
 }
 
 .form-control {
-    width: 220px;
+    max-width: 220px;
     margin-right: 0rem;
     margin-left: auto;
     background-color: #B2CDE2;

@@ -3,9 +3,7 @@
         <div class="col-6">
             <h5>Tài khoản User</h5>
             <div class="dropdown">
-                <button class="dropdown-toggle btn_dropdown" type="button" data-bs-target="#LTK" data-bs-toggle="dropdown" aria-expanded="false">
-    Loại tài khoản
-  </button>
+                <button class="dropdown-toggle btn_dropdown" type="button" data-bs-target="#LTK" data-bs-toggle="dropdown" aria-expanded="false">Loại tài khoản</button>
                 <ul class="dropdown-menu" id="LTK">
                     <li class="dropdown-toggle"><span class="dropdown-item" href="#">Gia sư</span></li>
                     <li class="dropdown-toggle"><span class="dropdown-item" href="#">Học viên</span></li>
@@ -20,9 +18,8 @@
     </div>
     <div class="row">
         <table class="table">
-            <thead>
-                <tr>
-
+            <thead class="text-center">
+                <tr >
                     <th scope="col">UserID</th>
                     <th scope="col">Loại tài khoản</th>
                     <th scope="col">Tên</th>
@@ -32,11 +29,11 @@
             </thead>
             <tbody>
                 <tr *ngFor="let l of learners">
-                    <td>{{l.TutorManage.UserID}}</td>
-                    <td>{{l.TutorManage.Role}}</td>
+                    <td class="text-center">{{l.TutorManage.UserID}}</td>
+                    <td class="text-center">{{l.TutorManage.Role}}</td>
                     <td>{{l.TutorInfo.Name}}</td>
-                    <td>50 lần </td>
-                    <td>
+                    <td class="text-center">50 lần </td>
+                    <td class="text-center">
                         <button type="button" class="btn_view--detail" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="{{isSelect(l) ? 'selected' : ''}} " (click)="onSelectTutor(l)">
                   View Detail
                 </button>
@@ -44,11 +41,11 @@
                     </td>
                 </tr>
                 <tr *ngFor="let t of tutors">
-                    <td>{{t.LearnerManage.UserID}}</td>
-                    <td>{{t.LearnerManage.Role}}</td>
+                    <td class="text-center">{{t.LearnerManage.UserID}}</td>
+                    <td class="text-center">{{t.LearnerManage.Role}}</td>
                     <td>{{t.LearnerInfo.Name}}</td>
-                    <td>50 lần </td>
-                    <td>
+                    <td class="text-center">50 lần </td>
+                    <td class="text-center">
                         <button type="button" class="btn_view--detail" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="{{isSelect(t) ? 'selected' : ''}} " (click)="onSelectLearner(t)">
                   View Detail
                 </button>
