@@ -11,9 +11,13 @@
     left: 0px;
 }
 
+::placeholder {
+    color: white;
+}
+
 .header_item {
-    width: 300px;
-    line-height: 50px;
+    width: 400px;
+    line-height: 30px;
 }
 
 .img-logo {
@@ -22,12 +26,30 @@
     padding: 10px;
 }
 
+.avt {
+    width: 30px;
+    height: auto;
+    padding: 10px;
+    border-radius: 50%;
+}
+
 .search_header {
     background-color: rgb(0, 0, 0, 0);
     color: white;
     margin: 5px;
     height: 1.5rem;
     border: none;
+}
+
+.btn_drop {
+    height: 25px;
+    width: 25px;
+    background-color: #C7EEFF;
+    border-radius: 50%;
+    border: none;
+    margin: 10px;
+    /* padding: 5px; */
+    vertical-align: middle;
 }
 
 
