@@ -7,14 +7,20 @@
     padding: 5px;
     height: 35px;
 }
-
-
+p{
+    margin-bottom: 0.5rem;
+}
 h5 {
     line-height: 50px;
 }
 .container{
     padding-right: 0;
     padding-left: 0;
+}
+
+.blog-box{
+    padding: 1rem 2rem; 
+    justify-content: space-evenly;
 }
 
 .container--blogs {
@@ -27,11 +33,7 @@ h5 {
     background-color: #cccccc;
     border-radius: 10px;
     margin: 0 3% 3rem 3%;
-    height: 25vw;
-}
-
-.blogs-img{
-    width: fit-content;
+    height: fit-content;
 }
 
 #author {
@@ -43,12 +45,13 @@ h5 {
 .content-item {
     text-overflow: ellipsis;
     overflow: hidden;
-    white-space: wrap;
     height: 3rem;
+    margin: auto 3%;
 }
 
 .title {
     text-transform: lowercase;
+    padding: 0 3%;
 }
 
 .title:first-letter {
@@ -89,4 +92,10 @@ textarea {
     margin: 0.5rem 0rem;
     background-color: #B2CDE2;
     border: none;
+}
+
+@media screen and (max-width: 768px) {
+    *{
+        font-size: 15px;
+    }
 }
