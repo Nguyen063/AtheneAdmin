@@ -1,8 +1,6 @@
 <!-- Header -->
 <div class="row">
     <div class="header">
-
-        <!--Item left-->
         <div class="header_item">
             <img class="img-logo" id="logo" src="#" alt="Logo" />
             <span>ATHENE</span>
@@ -18,12 +16,12 @@
     <div class="col-2 overflow-auto sidebar container-fluid">
         <!-- Dashboard -->
         <div>
-            <button class="btn btn-primary container-fluid" type="button" data-bs-toggle="collapse" data-bs-target="#dashboard" aria-expanded="false" routerLink="/dashboard" routerLinkActive="active"> Dashboard </button>
+            <button class="btn btn-primary container-fluid nav-btn" type="button" data-bs-toggle="collapse" data-bs-target="#dashboard" aria-expanded="false" routerLink="/dashboard" > Dashboard </button>
         </div>
 
         <!-- Quản lý -->
         <div>
-            <button class="btn btn-primary container-fluid" type="button" data-bs-toggle="collapse" data-bs-target="#manage" aria-expanded="false"> Quản lý </button>
+            <button class="btn btn-primary container-fluid nav-btn" type="button" data-bs-toggle="collapse" data-bs-target="#manage" aria-expanded="false"> Quản lý </button>
             <ul class="list-group collapse" id="manage">
                 <li class="list-group-item">
                     <span routerLink="/user-manager" routerLinkActive="active"> Tài khoản user</span>
@@ -43,8 +41,7 @@
         <!-- Xét duyệt -->
 
         <div>
-
-            <button class="btn btn-primary container-fluid" type="button" data-bs-toggle="collapse" data-bs-target="#approval" aria-expanded="false"> Xét duyệt
+            <button class="btn btn-primary container-fluid nav-btn" type="button" data-bs-toggle="collapse" data-bs-target="#approval" aria-expanded="false"> Xét duyệt
           </button>
             <ul class="list-group collapse" id="approval">
                 <li class="list-group-item">
@@ -58,7 +55,7 @@
         </div>
         <!-- Cập nhật nội dung -->
         <div>
-            <button class="btn btn-primary container-fluid" type="button" data-bs-toggle="collapse" data-bs-target="#Update" aria-expanded="false"> Cập nhật nội dung
+            <button class="btn btn-primary container-fluid nav-btn" type="button" data-bs-toggle="collapse" data-bs-target="#Update" aria-expanded="false"> Cập nhật nội dung
         </button>
 
             <ul class="list-group collapse" id="Update">
@@ -76,7 +73,6 @@
     <div class="col-10">
         <div class="home container-fluid overflow-auto">
             <router-outlet></router-outlet>
-
         </div>
     </div>
 </div>

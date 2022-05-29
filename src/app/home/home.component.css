@@ -1,8 +1,7 @@
-* {
-    margin: 0px;
-    padding: 0px;
+*{
+    font-size: 1.3vw;
+    margin-right: 0;
 }
-
 .header {
     height: 50px;
     width: 100vw;
@@ -13,6 +12,12 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
+}
+.list-group-item{
+    padding: 0.5em 1em 0.5em 10%;
+}
+.nav-btn{
+    padding-left: 10%;
 }
 
 .header_item {
@@ -36,7 +41,7 @@
     background-color: #004C7A;
     color: white;
     font-weight: 400;
-    padding: 0px 5px;
+    padding-right: 0;
 }
 
 .home {
@@ -74,7 +79,6 @@ li {
     background-color: rgb(255, 255, 255, 0);
     margin-left: 10px;
     border: none;
-    padding: 10px;
 }
 
 li:hover {
@@ -90,6 +94,11 @@ li:hover {
     border: none;
 }
 
+@media screen and (max-width: 800px) {
+    *{
+        font-size: 12px;
+    }
+}
 
 /* Silde bar cash 2 */
 
