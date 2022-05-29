@@ -49,14 +49,11 @@ const routes: Routes = [
     path:'feedback', component:FeedbackComponent
   },
   {
-    path:'infor-learner', component: InforLearnerComponent
+    path:'user-manager/info-learner/:id', component: InforLearnerComponent
   },
   {
-    path:'infor-tutor', component: InforTutorComponent
+    path:'user-manager/info-tutor/:id', component: InforTutorComponent
   },
-  // {
-  //   path:'class-detail', component: ClassDetailComponent
-  // },
   {
     path:'class-manager/:id', component : ClassDetailComponent
   },

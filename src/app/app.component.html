@@ -1,14 +1,20 @@
-<app-home></app-home>
-<!-- <app-user-management></app-user-management>
-<app-class-managerment></app-class-managerment> -->
-<!-- <app-user-management></app-user-management> -->
-<!-- <app-class-managerment></app-class-managerment> -->
-<!-- <app-infor-tutor></app-infor-tutor> -->
-<!-- <app-infor-learner></app-infor-learner> -->
-<!-- <app-sign-in></app-sign-in> -->
-<!-- <app-class-detail></app-class-detail> -->
-<!-- <app-new-account></app-new-account> -->
-<!-- <app-new-class></app-new-class> -->
-<!-- <app-feedback></app-feedback> -->
-<!-- <app-blog-detail></app-blog-detail> -->
-<!-- <router-outlet></router-outlet> -->
+<!-- Header -->
+<div class="row">
+    <div class="header">
+        <div class="header_item">
+            <img class="img-logo" id="logo" src="#" alt="Logo" />
+            <span>ATHENE</span>
+        </div>
+        <div class="header_item">
+            <i class="bi bi-search"></i> <input class="search_header" type="search" placeholder="Search" />
+        </div>
+    </div>
+</div>
+<div class="row body-container" [ngStyle]="{'margin-top': '3rem'}">
+    <div class="col-2 ">
+        <app-home></app-home>
+    </div>
+    <div class="col-10 home container-fluid overflow-auto">
+        <router-outlet></router-outlet>
+    </div>
+</div>

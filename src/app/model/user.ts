@@ -4,7 +4,7 @@ export class Learner{
         Ava: String,
         Direct: String,
         Gender: String,
-        DOB: String,
+        DOB: Date,
         CCCD: String,
         PhoneNumber: String,
         Exp: String,
@@ -24,7 +24,6 @@ export class Learner{
      });
      TutorManage=Object({
         UserID: String,
-        CreatedAt: String,
         TotalClass: String,
         ClassID: String,
         Role: String,
@@ -79,7 +78,7 @@ export class Tutor{
         Ava: String,
         Direct: String,
         Gender: String,
-        DOB: String,
+        DOB: Date,
         CCCD: String,
         PhoneNumber: String});
     TutorFinding=Object({
@@ -96,7 +95,6 @@ export class Tutor{
     Other: String});
         LearnerManage=Object({
            UserID: String,
-           CreatedAt: String,
            TotalClass: String,
            ClassID: String,
            Role: String,

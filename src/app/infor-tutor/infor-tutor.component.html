@@ -1,99 +1,101 @@
-<div class="container">
-    <div class="row">
-        <h5 style="text-align:center">THÔNG TIN GIA SƯ</h5>
-        <div class="col-4">
-            <div class="container-fluid">
-                <img class="img-tutor" src="#">
+<div class="container" *ngFor="let l of learners">
+    <div [class.d-none]="l.id==selectedId?false:true">
+        <div class="row">
+            <h5 style="text-align:center">THÔNG TIN GIA SƯ</h5>
+            <div class="col-4">
+                <div class="container-fluid">
+                    <img class="img-tutor" src="http://localhost:3000/{{l.TutorInfo.Ava}}">
+                </div>
+
             </div>
 
-        </div>
+            <div class="col-4">
+                <div class="">
+                    <ul>
+                        <li>UserID: <span class="fnm">{{l.TutorManage.UserID}}</span></li>
+                        <li>Họ và tên: <span class="fnm">{{l.TutorInfo.Name}}</span></li>
+                        <li>Ngày sinh: <span class="fnm">{{l.TutorInfo.DOB|date:"dd/MM/yyyy"}}</span></li>
+                        <li>Địa chỉ: <span class="fnm">{{l.TutorInfo.Direct}}</span></li>
+                    </ul>
+                    <ul>
+                        <li>CCCD: <span class="fnm">{{l.TutorInfo.CCCD}}</span></li>
+                        <li>SV/Cựu SV trường: <span class="fnm">{{l.TutorInfo.Education}}</span></li>
+                        <li>Chuyên ngành: <span class="fnm">{{l.TutorInfo.Major}}</span></li>
+                        <li>Kinh nghiệm: <span class="fnm">{{l.TutorInfo.Exp}}</span></li>
+                        <li>Bằng cấp khác: <span class="fnm">{{l.TutorInfo.Degree}}</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="">
+                    <ul>
+                        <br/>
+                        <li>Giới tính: <span class="fnm">{{l.TutorInfo.Gender}}</span></li>
+                        <br/> <br/>
 
-        <div class="col-4">
-            <div class="">
+                    </ul>
+                    <ul>
+                        <li>SĐT: <span class="fnm">{{l.TutorInfo.PhoneNumber}}</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 col-row--2">
+                <h5 style="padding-left: 1rem">Học viên hướng đến:</h5>
                 <ul>
-                    <li>UserID: <span class="fnm">1000</span></li>
-                    <li>Họ và tên: <span class="fnm">Hứa Làm Chi</span></li>
-                    <li>Ngày sinh: <span class="fnm">1000</span></li>
-                    <li>Địa chỉ:<span class="fnm">1000</span></li>
+                    <li>Cấp học: <span class="fnm">{{l.LearnerFinding.Caphoc}}</span></li>
+                    <li>Môn học: <span class="fnm">{{l.LearnerFinding.Subject}}</span></li>
+                    <li>Giới tính: <span class="fnm">{{l.LearnerFinding.LearnerGender}}</span></li>
+                    <li>Địa điểm dạy: <span class="fnm">{{l.LearnerFinding.Location}}</span></li>
                 </ul>
                 <ul>
-                    <li>CCCD: <span class="fnm">1000</span></li>
-                    <li>SV/Cựu SV trường: <span class="fnm">1000</span></li>
-                    <li>Chuyên ngành: <span class="fnm">Hứa Làm Chi</span></li>
-                    <li>Kinh nghiệm: <span class="fnm">1000</span></li>
-                    <li>Bằng cấp khác:<span class="fnm">1000</span></li>
+                    <li>Thời gian dạy: <span class="fnm">{{l.LearnerFinding.TeachingTime}}</span></li>
+                    <li>Mức lương mong muốn: <span class="fnm">{{l.LearnerFinding.Fee}}</span></li>
+                    <li>Lịch dạy dự kiến: <span class="fnm">{{l.LearnerFinding.Schedule}}</span></li>
+                    <li>Mô tả thêm: <span class="fnm">{{l.LearnerFinding.Other}}</span></li>
+                </ul>
+            </div>
+            <div class="col-6 col-row--2">
+                <h5 style="padding-left: 1rem">Thông tin tài khoản:</h5>
+                <ul>
+                    <li> Created At: <span class="fnm">{{l.TutorManage.CreatedAt|date:"dd/MM/yyyy"}}</span></li>
+                    <li> Lượt truy cập tháng này: <span class="fnm"></span></li>
+                    <li> Số lớp đang dạy: <span class="fnm">{{l.TutorManage.TotalClass}}</span></li>
+                    <li> ClassID: <span class="fnm">{{l.TutorManage.ClassID}}</span></li>
+                </ul>
+                <ul>
+                    <li> Thu nhập trung bình/lớp: <span class="fnm"></span></li>
+                    <li> Tổng thu nhập tháng này: <span class="fnm"></span></li>
+                    <li> Tổng thu nhập kiếm được: <span class="fnm"></span></li>
                 </ul>
             </div>
         </div>
-        <div class="col-4">
-            <div class="">
-                <ul>
-                    <br/>
-                    <li>Giới tính <span class="fnm">Hứa Làm Chi</span></li>
-                    <br/> <br/>
+        <div class="row col-row--2">
 
-                </ul>
-                <ul>
-                    <li>Ngày cấp: <span class="fnm">Hứa Làm Chi</span></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-6 col-row--2">
-            <h5 style="padding-left: 1rem">Học viên hướng đến:</h5>
-            <ul>
-                <li>Cấp học: <span class="fnm">1000</span></li>
-                <li>Môn học: <span class="fnm">Hứa Làm Chi</span></li>
-                <li>Giới tính: <span class="fnm">1000</span></li>
-                <li>Địa điểm dạy:<span class="fnm">1000</span></li>
-            </ul>
-            <ul>
-                <li>Thời gian dạy:<span class="fnm">1000</span></li>
-                <li>Mức lương mong muốn: <span class="fnm">1000</span></li>
-                <li>Lịch dạy dự kiến: <span class="fnm">Hứa Làm Chi</span></li>
-                <li>Mô tả thêm: <span class="fnm">1000</span></li>
-            </ul>
-        </div>
-        <div class="col-6 col-row--2">
-            <h5 style="padding-left: 1rem">Thông tin tài khoản:</h5>
-            <ul>
-                <li> Created At:<span class="fnm">1000</span></li>
-                <li> Lượt truy cập tháng này: <span class="fnm">1000</span></li>
-                <li> Số lớp đang dạy:<span class="fnm">Hứa Làm Chi</span></li>
-                <li> ClassID: <span class="fnm">1000</span></li>
-            </ul>
-            <ul>
-                <li> Thu nhập trung bình / lớp: <span class="fnm">1000</span></li>
-                <li> Tổng thu nhập tháng này: <span class="fnm">1000</span></li>
-                <li> Tổng thu nhập kiếm được: <span class="fnm">1000</span></li>
-            </ul>
-        </div>
-    </div>
-    <div class="row col-row--2">
+            <h5 style="text-align:center">Lịch sử giao dịch</h5>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">TranID</th>
+                        <th scope="col">Ngày</th>
+                        <th scope="col">Số tiền</th>
+                        <th scope="col">TK nhận</th>
+                        <th scope="col">Nội dung GD</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{l.TransTutor.TransID}}</td>
+                        <td>{{l.TransTutor.DateCreate|date:"dd/MM/yyyy"}}</td>
+                        <td>{{l.TransTutor.Fee}}</td>
+                        <td>{{l.TransTutor.ReceivableAcc}}</td>
+                        <td>{{l.TransTutor.Content}}</td>
+                    </tr>
 
-        <h5 style="text-align:center">Lịch sử giao dịch</h5>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">TranID</th>
-                    <th scope="col">Ngày</th>
-                    <th scope="col">Số tiền</th>
-                    <th scope="col">TK nhận</th>
-                    <th scope="col">Nội dung GD</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>190068686</td>
-                    <td>12/12/2021</td>
-                    <td>12.000.000</td>
-                    <td>BIDV 1984214924129</td>
-                    <td>Học phí tháng 5 lớp:91827421894</td>
-                </tr>
-
-            </tbody>
-        </table>
-        <button type="submit" class="btn-history">Lịch sử giao dịch</button>
+                </tbody>
+            </table>
+            <button type="submit" class="btn-history">Lịch sử giao dịch</button>
+        </div>
     </div>
 </div>
