@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ManageService } from '../service/manage.service';
 
 @Component({
@@ -8,7 +9,9 @@ import { ManageService } from '../service/manage.service';
 })
 export class UserManagementComponent implements OnInit {
 
-  constructor(private _service: ManageService) { }
+  constructor(private _service: ManageService, private _router: Router) { }
+
+  selectedId: any;
 learners: any;
 tutors:any;
 errMessage: string=""
@@ -28,4 +31,15 @@ errMessage: string=""
       error : err=> this.errMessage=err
     })
    }
+   onSelectLearner(data:any):void{
+    this._router.navigate(['/user-manager/info-learner', data.id])
+  }
+
+   onSelectTutor(data:any):void{
+    this._router.navigate(['/user-manager/info-tutor', data.id])
+  }
+  isSelect(data:any){
+    return data.id===this.selectedId;
+  }
+
 }
