@@ -1,7 +1,8 @@
-*{
+* {
     font-size: 1.3vw;
     margin-right: 0;
 }
+
 .header {
     height: 50px;
     width: 100vw;
@@ -13,10 +14,12 @@
     flex-wrap: nowrap;
     justify-content: space-between;
 }
-.list-group-item{
+
+.list-group-item {
     padding: 0.5em 1em 0.5em 10%;
 }
-.nav-btn{
+
+.nav-btn {
     padding-left: 10%;
 }
 
@@ -37,7 +40,7 @@
 
 .sidebar {
     position: relative;
-    height: calc(100vh);
+    height: 100%;
     background-color: #004C7A;
     color: white;
     font-weight: 400;
@@ -95,10 +98,11 @@ li:hover {
 }
 
 @media screen and (max-width: 800px) {
-    *{
+    * {
         font-size: 12px;
     }
 }
+
 
 /* Silde bar cash 2 */
 
