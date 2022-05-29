@@ -1,3 +1,4 @@
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { UpdateBlogComponent } from './update-blog/update-blog.component';
 import { NewClassComponent } from './new-class/new-class.component';
@@ -14,6 +15,9 @@ import { InforLearnerComponent } from './infor-learner/infor-learner.component';
 import { InforTutorComponent } from './infor-tutor/infor-tutor.component';
 import { ClassDetailComponent } from './class-detail/class-detail.component';
 const routes: Routes = [
+  {
+    path:'dashboard', component:DashboardComponent
+  },
   {
     path:'class-manager', component : ClassManagermentComponent
   },
@@ -52,7 +56,7 @@ const routes: Routes = [
   },
   // {
   //   path:'class-detail', component: ClassDetailComponent
-  // },  
+  // },
   {
     path:'class-manager/:id', component : ClassDetailComponent
   },
@@ -67,4 +71,4 @@ export class AppRoutingModule { }
 export const Routingcomonents={ClassManagermentComponent, HomeComponent,
    NewAccountComponent, NewClassComponent,TransationManagermentComponent,
     UpdateBlogComponent,UpdateWebsiteComponent, UserManagementComponent,
-  FeedbackComponent, InforLearnerComponent,InforTutorComponent, ClassDetailComponent}
+  FeedbackComponent, InforLearnerComponent,InforTutorComponent, ClassDetailComponent, DashboardComponent}

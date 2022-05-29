@@ -1,0 +1,53 @@
+table {
+    /* vertical-align: middle; */
+    text-align: center;
+}
+
+.label-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+label {
+    width: 8.5rem;
+    color: white;
+    font-weight: 500;
+    border-radius: 1rem;
+    font: roboto;
+    background-color: #0077C0;
+    text-align: center;
+    border: none;
+    padding: 1rem 0.5rem;
+    margin: 0.5rem;
+    font-size: 1.2rem;
+    line-height: 0.8rem;
+}
+
+label:hover {
+    background-color: #009dff;
+}
+
+.label-1 {
+    font-size: 0.9rem;
+    vertical-align: middle;
+}
+
+.label-2 {
+    font-size: 1rem;
+    vertical-align: middle;
+}
+
+.form-control {
+    width: 220px;
+    margin-right: 0rem;
+    margin-left: auto;
+    background-color: #B2CDE2;
+    border-radius: 0.4rem;
+    padding: 5px;
+    height: 35px;
+}
+
+h5 {
+    line-height: 50px;
+}
