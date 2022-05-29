@@ -1,5 +1,5 @@
 <!-- Header -->
-<div class="row">
+<!-- <div class="row">
     <div class="header">
         <div class="header_item">
             <img class="img-logo" id="logo" src="#" alt="Logo" />
@@ -9,70 +9,71 @@
             <i class="bi bi-search"></i> <input class="search_header" type="search" placeholder="Search" />
         </div>
     </div>
-</div>
+</div> -->
 
 <!-- Body -->
-<div class="row body-container">
-    <div class="col-2 overflow-auto sidebar container-fluid">
-        <!-- Dashboard -->
-        <div>
-            <button class="btn btn-primary container-fluid nav-btn" type="button" data-bs-toggle="collapse" data-bs-target="#dashboard" aria-expanded="false" routerLink="/dashboard" > Dashboard </button>
-        </div>
+<!-- <div class="row body-container">
+    <div class="col-2 overflow-auto sidebar container-fluid"> -->
 
-        <!-- Quản lý -->
-        <div>
-            <button class="btn btn-primary container-fluid nav-btn" type="button" data-bs-toggle="collapse" data-bs-target="#manage" aria-expanded="false"> Quản lý </button>
-            <ul class="list-group collapse" id="manage">
-                <li class="list-group-item">
-                    <span routerLink="/user-manager" routerLinkActive="active"> Tài khoản user</span>
-                </li>
-                <li class="list-group-item">
-                    <span routerLink="/class-manager" routerLinkActive="active">Lớp học</span>
-                </li>
-                <li class="list-group-item">
-                    <span routerLink="/transation-managerment" routerLinkActive="active">Giao dịch</span>
-                </li>
-                <li class="list-group-item">
-                    <span routerLink="/feedback" routerLinkActive="active">Feedback</span>
-                </li>
-            </ul>
-        </div>
+<div class="overflow-auto sidebar container-fluid">
+    <!-- Dashboard -->
+    <div>
+        <button class="btn btn-primary container-fluid nav-btn" style="margin-top:10px;" type="button" data-bs-toggle="collapse" data-bs-target="#dashboard" aria-expanded="false" routerLink="/dashboard"> Dashboard </button>
+    </div>
 
-        <!-- Xét duyệt -->
+    <!-- Quản lý -->
+    <div>
+        <button class="btn btn-primary container-fluid nav-btn" type="button" data-bs-toggle="collapse" data-bs-target="#manage" aria-expanded="false"> Quản lý </button>
+        <ul class="list-group collapse" id="manage">
+            <li class="list-group-item">
+                <span routerLink="/user-manager" routerLinkActive="active"> Tài khoản user</span>
+            </li>
+            <li class="list-group-item">
+                <span routerLink="/class-manager" routerLinkActive="active">Lớp học</span>
+            </li>
+            <li class="list-group-item">
+                <span routerLink="/transation-managerment" routerLinkActive="active">Giao dịch</span>
+            </li>
+            <li class="list-group-item">
+                <span routerLink="/feedback" routerLinkActive="active">Feedback</span>
+            </li>
+        </ul>
+    </div>
 
-        <div>
-            <button class="btn btn-primary container-fluid nav-btn" type="button" data-bs-toggle="collapse" data-bs-target="#approval" aria-expanded="false"> Xét duyệt
+    <!-- Xét duyệt -->
+
+    <div>
+        <button class="btn btn-primary container-fluid nav-btn" type="button" data-bs-toggle="collapse" data-bs-target="#approval" aria-expanded="false"> Xét duyệt
           </button>
-            <ul class="list-group collapse" id="approval">
-                <li class="list-group-item">
-                    <span routerLink="/new-account" routerLinkActive="active">Tài khoản mới</span>
-                </li>
-                <li class="list-group-item">
-                    <span routerLink="/new-class" routerLinkActive="active">Yêu cầu tạo lớp mới</span>
+        <ul class="list-group collapse" id="approval">
+            <li class="list-group-item">
+                <span routerLink="/new-account" routerLinkActive="active">Tài khoản mới</span>
+            </li>
+            <li class="list-group-item">
+                <span routerLink="/new-class" routerLinkActive="active">Yêu cầu tạo lớp mới</span>
 
-                </li>
-            </ul>
-        </div>
-        <!-- Cập nhật nội dung -->
-        <div>
-            <button class="btn btn-primary container-fluid nav-btn" type="button" data-bs-toggle="collapse" data-bs-target="#Update" aria-expanded="false"> Cập nhật nội dung
+            </li>
+        </ul>
+    </div>
+    <!-- Cập nhật nội dung -->
+    <div>
+        <button class="btn btn-primary container-fluid nav-btn" type="button" data-bs-toggle="collapse" data-bs-target="#Update" aria-expanded="false"> Cập nhật nội dung
         </button>
 
-            <ul class="list-group collapse" id="Update">
-                <li class="list-group-item">
-                    <span routerLink="/update-website" routerLinkActive="active"> Thông tin website</span>
+        <ul class="list-group collapse" id="Update">
+            <li class="list-group-item">
+                <span routerLink="/update-website" routerLinkActive="active"> Thông tin website</span>
 
-                </li>
-                <li class="list-group-item">
-                    <span routerLink="/update-blog" routerLinkActive="active">Blog</span>
-                </li>
-            </ul>
-        </div>
+            </li>
+            <li class="list-group-item">
+                <span routerLink="/update-blog" routerLinkActive="active">Blog</span>
+            </li>
+        </ul>
     </div>
 
-    <div class="col-10">
-        <div class="home container-fluid overflow-auto">
-            <router-outlet></router-outlet>
-        </div>
-    </div>
 </div>
+<!-- <div class="col-10">
+        <div class="home container-fluid overflow-auto">
+
+        </div>
+    </div> -->
