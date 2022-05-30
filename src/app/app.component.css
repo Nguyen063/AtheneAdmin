@@ -53,7 +53,7 @@ select {
     background-color: #004C7A;
     color: white;
     font-weight: 400;
-    left: -13rem;
+    left: 0rem;
     position: fixed;
     width: 13rem;
     height: 100vh;
@@ -67,10 +67,9 @@ select {
 
 .content {
     position: relative;
-    left: 0rem;
+    left: 13rem;
     height: 100vh;
-    /* width: calc(100% - 13rem); */
-    width: 100%;
+    width: calc(100% - 13rem);
     background-color: white;
 }
 
@@ -125,13 +124,65 @@ li:hover {
     margin-left: 13rem;
     margin-top: 0.2rem;
     z-index: 11;
-    background-color: rgb(242, 189, 0);
+    /* background-color: rgb(242, 189, 0); */
+    display: none;
 }
 
 .btn-menu:hover {
     cursor: pointer;
 }
 
-.btn-menu.active {
+
+/* .btn-menu.active {
     margin-left: 11.3rem;
+} */
+
+@media screen and (max-width: 700px) {
+    /* SIDEBAR */
+    .sidebar {
+        position: fixed;
+        background-color: #004C7A;
+        color: white;
+        font-weight: 400;
+        left: 130rem;
+        position: fixed;
+        width: 100%;
+        height: auto;
+        z-index: 10;
+    }
+    .sidebar.active {
+        left: 0rem;
+        width: 13rem;
+        position: absolute;
+        height: 100%;
+    }
+    .content {
+        position: relative;
+        left: 0rem;
+        height: 100vh;
+        /* width: calc(100% - 13rem); */
+        width: 100%;
+        background-color: white;
+    }
+    .content.active {
+        width: 100%;
+        left: 0rem;
+    }
+    .btn-menu {
+        position: fixed;
+        color: rgb(255, 0, 0);
+        width: 2rem;
+        height: 2rem;
+        margin-left: 0.2rem;
+        margin-top: 0.2rem;
+        z-index: 11;
+        display: block;
+        /* background-color: #0077C0; */
+    }
+    .btn-menu.active {
+        position: relative;
+        /* margin-left: auto;
+        margin-top: 0.2rem;
+        margin-right: 0.2rem; */
+    }
 }

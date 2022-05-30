@@ -25,9 +25,6 @@
     <div>
         <div>
             <div class="sidebar">
-                <div class="btn-menu">
-                    <span (click)="RpMenu()"><i class="fas fa-bars"></i></span>
-                </div>
                 <!-- Dashboard -->
                 <div>
                     <div>
@@ -87,6 +84,9 @@
                 </div>
             </div>
             <div class="content" [ngStyle]="{'margin-top': '3rem'}">
+                <div class="btn-menu">
+                    <span (click)="RpMenu()"><i class="fas fa-caret-down"></i></span>
+                </div>
                 <div>
                     <router-outlet></router-outlet>
                 </div>
