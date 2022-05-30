@@ -3,13 +3,16 @@
         <div class="col-6">
             <h5>Quản lý lớp học</h5>
             <div class="dropdown">
-                <button class="dropdown-toggle btn_dropdown" type="button" data-bs-target="#LTK" data-bs-toggle="dropdown" aria-expanded="false">
-Trạng thái
-</button>
-                <ul class="dropdown-menu" id="LTK">
-                    <li class="dropdown-toggle"><span class="dropdown-item" href="#">Gia sư</span></li>
-                    <li class="dropdown-toggle"><span class="dropdown-item" href="#">Học viên</span></li>
-                </ul>
+                <form >
+                    <select name="status" id="status">
+                      <option hidden >Trạng thái</option>
+                      <option style="color:green ;" value="ongoing">Đang hoạt động</option>
+                      <option style="color:red ;" value="end">Kết thúc</option>
+                      <option style="color:blue ;" value="testing">Thử nghiệm</option>
+                    </select>
+        
+                  </form>
+               
             </div>
         </div>
         <div class="col-6">

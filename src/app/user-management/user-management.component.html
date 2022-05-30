@@ -2,13 +2,14 @@
     <div class="row">
         <div class="col-6">
             <h5>Tài khoản User</h5>
-            <div class="dropdown">
-                <button class="dropdown-toggle btn_dropdown" type="button" data-bs-target="#LTK" data-bs-toggle="dropdown" aria-expanded="false">Loại tài khoản</button>
-                <ul class="dropdown-menu" id="LTK">
-                    <li class="dropdown-toggle"><span class="dropdown-item" href="#">Gia sư</span></li>
-                    <li class="dropdown-toggle"><span class="dropdown-item" href="#">Học viên</span></li>
-                </ul>
-            </div>
+            <form >
+                <select name="status" id="status">
+                  <option hidden >Loại tài khoản</option>
+                  <option value="account">Gia sư</option>
+                  <option value="account">Học viên</option>
+                </select>
+    
+              </form>
         </div>
         <div class="col-6">
             <form class="d-flex ">
