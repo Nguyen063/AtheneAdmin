@@ -60,10 +60,11 @@ select {
     z-index: 10;
 }
 
-.sidebar.active {
+
+/* .sidebar.active {
     left: 0rem;
-    /* width: 100% */
-}
+    width: 100%
+} */
 
 .content {
     position: relative;
@@ -73,10 +74,11 @@ select {
     background-color: white;
 }
 
-.content.active {
+
+/* .content.active {
     width: 100%;
     left: 0rem;
-}
+} */
 
 .form-control {
     width: 12rem;
