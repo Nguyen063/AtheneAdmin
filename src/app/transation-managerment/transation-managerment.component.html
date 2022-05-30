@@ -2,15 +2,14 @@
     <div class="row">
         <div class="col-6">
             <h5>Quản lý lớp học</h5>
-            <div class="dropdown">
-                <button class="dropdown-toggle btn_dropdown" type="button" data-bs-target="#LTK" data-bs-toggle="dropdown" aria-expanded="false">
-Trạng thái
-</button>
-                <ul class="dropdown-menu" id="LTK">
-                    <li class="dropdown-toggle"><span class="dropdown-item" href="#">Gia sư</span></li>
-                    <li class="dropdown-toggle"><span class="dropdown-item" href="#">Học viên</span></li>
-                </ul>
-            </div>
+            <form >
+                <select name="transaction" id="transaction">
+                  <option hidden >Loại giao dịch</option>
+                  <option value="send">Gửi tiền</option>
+                  <option value="recieve">Nhận tiền</option>
+                </select>
+    
+              </form>
         </div>
         <div class="col-6">
             <form class="d-flex ">
