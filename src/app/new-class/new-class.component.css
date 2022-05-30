@@ -4,6 +4,11 @@
     justify-content: space-between;
 }
 
+
+.row{
+    --bs-gutter-x: 0;
+}
+
 .btn {
     background-color: #0077C0;
     margin-left: auto;
@@ -12,6 +17,7 @@
     color: white;
     font-weight: 500;
 }
+
 
 .btn--0 {
     width: 150px;

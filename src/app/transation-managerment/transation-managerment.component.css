@@ -36,11 +36,7 @@ label:hover {
 
 .form-control {
     max-width: 220px;
-    margin-right: 0rem;
-    margin-left: auto;
     background-color: #B2CDE2;
-    border-radius: 0.4rem;
-    padding: 5px;
 }
 
 .container{
