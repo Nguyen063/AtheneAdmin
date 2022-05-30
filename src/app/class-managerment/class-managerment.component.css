@@ -66,6 +66,10 @@ ul {
     height: 35px;
 }
 
+.table>thead{
+    vertical-align: middle;
+}
+
 h5 {
     line-height: 50px;
 }
