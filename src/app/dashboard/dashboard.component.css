@@ -9,7 +9,7 @@ table {
     justify-content: flex-end;
 }
 
-div.row{
+div.row {
     --bs-gutter-x: 0;
 }
 
@@ -57,7 +57,9 @@ h5 {
 }
 
 .chart-container {
+    display: flex;
     width: 80%;
     height: auto;
-    max-width: 80%;
+    /* min-width: 80vw; */
+    z-index: 0;
 }

@@ -1,0 +1,71 @@
+.dropdown-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-dropdown {
+    background-color: rgb(255, 255, 255, 0);
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    z-index: 2;
+}
+
+li {
+    background-color: #B2CDE2;
+    border: none;
+}
+
+.list-1 {
+    background-color: #B2CDE2;
+    padding: 1rem;
+}
+
+.list-2 {
+    background-color: #B2CDE2;
+    padding: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.tool {
+    background-color: white;
+    height: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    vertical-align: middle;
+}
+
+.content {
+    margin-top: 1rem;
+    width: 100%;
+    background-color: white;
+    height: 10rem;
+    padding: 1rem;
+}
+
+.btn-1 {
+    background-color: rgb(255, 255, 255, 0);
+    border: none;
+}
+
+.btn-file {
+    display: flex;
+    justify-content: center;
+    /* color: rgb(255, 255, 255, 0) */
+    margin: 0.2rem;
+}
+
+select {
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+option {
+    background-color: #B2CDE2;
+    border: none;
+    font-size: 1rem;
+}
