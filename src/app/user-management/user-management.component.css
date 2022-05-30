@@ -82,6 +82,10 @@ h5 {
     line-height: 50px;
 }
 
+.table>thead{
+    vertical-align: middle;
+}
+
 .row{
     --bs-gutter-x: 0;
 }

@@ -8,7 +8,6 @@
                   <option value="send">Gửi tiền</option>
                   <option value="recieve">Nhận tiền</option>
                 </select>
-    
               </form>
         </div>
         <div class="col-6">
@@ -16,12 +15,13 @@
                 <input class="form-control" type="search" placeholder="Search" aria-label="Search">
             </form>
             <div class="label-container">
-                <label>
+                <label class="trans-overview">
                 <p>15M</p> <span class="label-2">Lợi nhuận</span>
               </label>
-                <label>
+                <label class="trans-overview">
                   <p>15M</p> <span class="label-2">Tiền gửi</span>
-              </label> <label>
+              </label> 
+              <label class="trans-overview">
                 <p>15M </p> <span class="label-2">Tiền nhận</span>
               </label>
             </div>
@@ -31,8 +31,8 @@
     </div>
     <div class="row">
         <table class="table">
-            <thead>
-                <tr>
+            <thead class="text-center">
+                <tr >
                     <th scope="col">TransID</th>
                     <th scope="col">Describe</th>
                     <th scope="col">Số tiền</th>
@@ -44,8 +44,8 @@
             <tbody>
                 <tr *ngFor="let t of transactions">
                     <td>{{t.TransInfo.TransId}}</td>
-                    <td>{{t.TransInfo.Method}}</td>
-                    <td>{{t.TransInfo.Fee}}</td>
+                    <td class="text-center">{{t.TransInfo.Method}}</td>
+                    <td class="text-center">{{t.TransInfo.Fee}}</td>
                     <td>{{t.SendAcc.Bank}} - {{t.SendAcc.STK}}</td>
                     <td>{{t.ReceivableAcc.Bank}} -{{t.ReceivableAcc.STK}}</td>
                     <td>{{t.TransInfo.Content}}</td>
