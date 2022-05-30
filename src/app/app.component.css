@@ -60,28 +60,30 @@
     background-color: #004C7A;
     color: white;
     font-weight: 400;
-    left: 0rem;
+    left: -13rem;
     position: fixed;
     width: 13rem;
     height: 100vh;
+    z-index: 10;
 }
 
 .sidebar.active {
-    left: 100rem;
-    width: 100%
+    left: 0rem;
+    /* width: 100% */
 }
 
 .content {
-    position: absolute;
-    left: 13rem;
+    position: relative;
+    left: 0rem;
     height: 100vh;
-    width: calc(100% - 13rem);
+    /* width: calc(100% - 13rem); */
+    width: 100%;
     background-color: white;
 }
 
 .content.active {
     width: 100%;
-    left: 0px;
+    left: 0rem;
 }
 
 .img-logo {
@@ -130,11 +132,13 @@ li:hover {
 
 .btn-menu {
     position: fixed;
-    color: rgb(0, 0, 0);
-    background-color: rgb(208, 121, 7);
+    color: rgb(255, 255, 255);
     width: 1.5rem;
     height: 1.5rem;
-    margin-left: -1.5rem;
+    margin-left: 13rem;
+    margin-top: 0.2rem;
+    z-index: 11;
+    background-color: rgb(242, 189, 0);
 }
 
 .btn-menu:hover {
@@ -142,5 +146,5 @@ li:hover {
 }
 
 .btn-menu.active {
-    margin-left: 0rem;
+    margin-left: 11.3rem;
 }
