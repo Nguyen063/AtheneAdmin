@@ -2,32 +2,34 @@
     <div class="row">
         <div class="col-6">
             <h5>Quản lý lớp học</h5>
-            <form >
-                <select name="transaction" id="transaction">
-                  <option hidden >Loại giao dịch</option>
-                  <option value="send">Gửi tiền</option>
-                  <option value="recieve">Nhận tiền</option>
-                </select>
-              </form>
         </div>
         <div class="col-6">
             <form class="d-flex ">
                 <input class="form-control" type="search" placeholder="Search" aria-label="Search">
             </form>
-            <div class="label-container">
-                <label class="trans-overview">
-                <p>15M</p> <span class="label-2">Lợi nhuận</span>
-              </label>
-                <label class="trans-overview">
-                  <p>15M</p> <span class="label-2">Tiền gửi</span>
-              </label> 
-              <label class="trans-overview">
-                <p>15M </p> <span class="label-2">Tiền nhận</span>
-              </label>
-            </div>
         </div>
-
-
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <form style="line-height: 70px;">
+                <select name="transaction" id="transaction">
+                  <option hidden >Loại giao dịch</option>
+                  <option value="send">Gửi tiền</option>
+                  <option value="recieve">Nhận tiền</option>
+                </select>
+            </form>
+        </div>
+        <div class="col-6 label-container" style="float: right;">
+            <label class="trans-overview">
+            <p>15M</p> <span class="label-2">Lợi nhuận</span>
+          </label>
+            <label class="trans-overview">
+              <p>15M</p> <span class="label-2">Tiền gửi</span>
+          </label> 
+          <label class="trans-overview">
+            <p>15M </p> <span class="label-2">Tiền nhận</span>
+          </label>
+        </div>
     </div>
     <div class="row">
         <table class="table">
