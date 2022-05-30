@@ -13,14 +13,24 @@
     font-weight: 500;
 }
 
+.content-des{
+    font-size: 80%;
+}
+
+.table>thead{
+    vertical-align: middle;
+}
+
 .btn--0 {
-    width: 150px;
+    width: 25%;
+    min-width: 80px;
     color: white;
     font-weight: 700;
-    border-radius: 20px;
-    font: roboto;
+    border-radius: 10px;
     background-color: #17D482;
     border: none;
+    margin-left: 10px;
+    font-size: 13px;
 }
 
 .btn--1:hover {
