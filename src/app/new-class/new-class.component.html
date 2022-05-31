@@ -44,7 +44,7 @@
             <div class="col-1 text-center">{{l.TutorManage.Role}}</div>
             <div class="col-2">{{l.TutorInfo.Name}}</div>
             <div class="col-2 text-center">{{l.TutorManage.CreatedAt|date:"dd/MM/yyyy"}}</div>
-            <div class="col-2 text-center"><button type="button" class="btn_view--detail ">
+            <div class="col-2 text-center"><button (click)="viewDetail()" type="button" class="btn_view--detail ">
             View Detail</button></div>
             <div class="col-1 text-center"><button type="button" class="btn_view--detail" (click)="delete(l._id)">
             <i class="bi bi-trash-fill"></i> </button></div>
@@ -63,7 +63,7 @@
             <div class="col-2 text-center">{{t.LearnerManage.CreatedAt|date:"dd/MM/yyyy"}}</div>
             <div class="col-2 text-center"><button type="button" class="btn_view--detail ">
             View Detail</button></div>
-            <div class="col-1 text-center"><button type="button" class="btn_view--detail" (click)="delete(t._id)">
+            <div class="col-1 text-center"><button (click)="viewDetail()" type="button" class="btn_view--detail" (click)="delete(t._id)">
             <i class="bi bi-trash-fill"></i> </button></div>
             <div class="item-id text-center"></div>
 
