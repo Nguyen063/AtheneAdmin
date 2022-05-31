@@ -12,7 +12,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     google.charts.load('current',{packages:['corechart']});
     google.charts.setOnLoadCallback(this.drawChart);
-    google.charts.setOnLoadCallback(this.BarChart);
+    google.charts.setOnLoadCallback(this.PieChart);
   }
   //Draw chart
   drawChart() {
@@ -23,7 +23,7 @@ export class DashboardComponent implements OnInit {
       ]);
     // Set Options
     var options = {
-      title: 'Ét ô ét',
+      title: 'Chart Demo',
       hAxis: {title: 'kkk'},
       vAxis: {title: 'SNdnldadn'},
       legend: 'none'
@@ -33,24 +33,24 @@ export class DashboardComponent implements OnInit {
     chart.draw(data, options);
     }
 
-   // BarChart
-    BarChart() {
+      //Pie Chart
+      PieChart() {
 
-      var data = google.visualization.arrayToDataTable([
-        ['Hehehe', 'Mhl'],
-        ['????', 55],
-        ['France', 49],
-        ['Spain', 44],
-        ['USA', 24],
-        ['Argentina', 15]
-      ]);
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Work',     11],
+          ['Eat',      2],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7]
+        ]);
 
-      var options = {
-        title: 'Ối giồi ôi, vẽ xong dashboard là hè lại về'
-      };
+        var options = {
+          title: 'My Daily Activities'
+        };
 
-      var chart = new google.visualization.BarChart(document.getElementById('myChart'));
-      chart.draw(data, options);
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 
+        chart.draw(data, null);
       }
   }
