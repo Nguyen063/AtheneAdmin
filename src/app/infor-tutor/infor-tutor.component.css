@@ -64,11 +64,14 @@ ul {
     margin-left: 0;
 }
 
+.row>* {
+    padding-left: 0;
+}
+
 .img-tutor {
     padding: 1rem;
-    width: 15rem;
+    width: 10rem;
     height: auto;
-    /* display: block; */
     margin-left: auto;
     margin-right: auto;
     vertical-align: middle;
@@ -108,4 +111,19 @@ ul {
     line-height: 3rem;
     text-decoration: underline;
 }
+
+@media screen and (max-width: 900px) {
+    .img-tutor{
+        display: none;
+    }
+    #imgBox{
+        width: 2rem;
+    }
+  }
+
+@media screen and (max-width: 768px) {
+    .col-5, .col-7{
+        width: 100%;
+    }
+  }
 
