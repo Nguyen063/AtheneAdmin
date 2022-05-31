@@ -40,7 +40,7 @@
                     <li>CCCD:<span class="fnm">{{c.TutorInfo.CCCD}}</span></li>
                     <li>Địa chỉ:<span class="fnm">{{c.TutorInfo.Direct}}</span></li>
                 </ul>
-                <button type="submit" class="btn-class btn-history">Xem chi tiết</button>
+                <button type="submit" class="btn-class btn-history" class="{{isSelect1(c.TutorInfo) ? 'selected' : ''}} " (click)="onSelectTutor(c.TutorInfo)">Xem chi tiết</button>
 
             </div>
             <div class="col-6 col-row--2">
@@ -53,7 +53,7 @@
                     <li>CCCD:<span class="fnm">{{c.StudentInfo.CCCD}}</span></li>
                     <li>Địa chỉ:<span class="fnm">{{c.StudentInfo.Direct}}</span></li>
                 </ul>
-                <button type="submit" class="btn-class btn-history">Xem chi tiết</button>
+                <button type="submit" class="btn-class btn-history" class="{{isSelect1(c.StudentInfo) ? 'selected' : ''}} " (click)="onSelectLearner(c.StudentInfo)">Xem chi tiết</button>
 
             </div>
         </div>
@@ -89,7 +89,6 @@
                         <td>{{c.TransTutor.ReceivableAcc}}</td>
                         <td>{{c.TransTutor.Content}} {{c.ClassInfo.ClassID}}</td>
                     </tr>
-
                 </tbody>
             </table>
 
