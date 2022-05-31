@@ -3,7 +3,6 @@ import { UpdateBlogComponent } from './update-blog/update-blog.component';
 import { NewClassComponent } from './new-class/new-class.component';
 import { NewAccountComponent } from './new-account/new-account.component';
 import { UserManagementComponent } from './user-management/user-management.component';
-import { HomeComponent } from './home/home.component';
 import { ClassManagermentComponent } from './class-managerment/class-managerment.component';
 import { RouterModule, Routes } from '@angular/router';
 import { UpdateWebsiteComponent } from './update-website/update-website.component';
@@ -25,9 +24,6 @@ const routes: Routes = [
   },
   {
     path:'transation-managerment', component: TransationManagermentComponent
-  },
-  {
-    path:'home', component:HomeComponent
   },
   {
     path:'new-account', component: NewAccountComponent
@@ -67,7 +63,7 @@ const routes: Routes = [
 })
 //Them component
 export class AppRoutingModule { }
-export const Routingcomonents={ClassManagermentComponent, HomeComponent,
+export const Routingcomonents={ClassManagermentComponent,
    NewAccountComponent, NewClassComponent,TransationManagermentComponent,
     UpdateBlogComponent,UpdateWebsiteComponent, UserManagementComponent,
   InforLearnerComponent,InforTutorComponent, ClassDetailComponent, DashboardComponent}

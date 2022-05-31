@@ -5,7 +5,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
 import { UserManagementComponent } from './user-management/user-management.component';
 import { ClassManagermentComponent } from './class-managerment/class-managerment.component';
 import { SignInComponent } from './sign-in/sign-in.component';
@@ -27,7 +26,6 @@ import { NgxPaginationModule } from 'ngx-pagination';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     UserManagementComponent,
     ClassManagermentComponent,
     SignInComponent,
@@ -40,6 +38,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     ClassDetailComponent,
     TransationManagermentComponent,
     BlogDetailComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

@@ -36,7 +36,7 @@ export class ClassDetailComponent implements OnInit {
       }
     )
 
-    // this.getTransaction();
+
   }
   getClass(){
     this._service.getClass().subscribe({
