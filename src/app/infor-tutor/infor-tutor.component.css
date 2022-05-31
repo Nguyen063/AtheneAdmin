@@ -1,11 +1,17 @@
 .container {
-    background-color: #E0EFFF;
+    padding-left: 10%;
+    padding-right: 10%;
     font-size: 1rem;
+}
+
+.row{
+    margin-right: 0;
+    margin-left: 0;
 }
 
 .img-tutor {
     padding: 1rem;
-    width: 10rem;
+    width: 100%;
     height: auto;
     display: block;
     margin-left: auto;
