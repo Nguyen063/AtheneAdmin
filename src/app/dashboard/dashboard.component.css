@@ -58,8 +58,34 @@ h5 {
 
 .chart-container {
     display: flex;
-    width: 80%;
+    flex-wrap: wrap;
+    width: 100%;
     height: auto;
-    min-width: 80vw;
     z-index: 0;
+}
+
+@media screen and (max-width: 700px) {
+    label {
+        width: 5rem;
+        color: white;
+        font-weight: 500;
+        border-radius: 0.8rem;
+        font: roboto;
+        background-color: #0077C0;
+        text-align: center;
+        border: none;
+        padding: 0.3rem 0.2rem;
+        margin: 0.2rem;
+        font-size: 1rem;
+        /* line-height: 0.8rem; */
+        vertical-align: text-bottom;
+    }
+    .label-1 {
+        font-size: 0.7rem;
+        vertical-align: text-top;
+    }
+    .label-2 {
+        font-size: 0.8rem;
+        vertical-align: text-top;
+    }
 }
