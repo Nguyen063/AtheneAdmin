@@ -10,7 +10,7 @@ import { ManageService } from '../service/manage.service';
 export class UserManagementComponent implements OnInit {
 
   constructor(private _service: ManageService, private _router: Router) { }
-
+  name:any;
   selectedId: any;
 learners: any;
 tutors:any;
@@ -40,6 +40,25 @@ errMessage: string=""
   }
   isSelect(data:any){
     return data.id===this.selectedId;
+  }
+
+  key: string ='id';
+  reverse: boolean = false;
+  sort(key: string){
+    this.key = key;
+    this.reverse = !this.reverse;
+  }
+
+  Search(){
+    if(this.name == ""){
+      this.ngOnInit();
+    }
+    else{
+      this.learners = this.learners.filter((res: { name: string; }) =>{
+        return res.name.toLocaleLowerCase().match(this.name.toLocaleLowerCase());
+      });
+    }
+
   }
 
 }
