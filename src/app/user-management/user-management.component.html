@@ -4,7 +4,7 @@
             <h5>Tài khoản User</h5>
             <form>
                 <select name="status" id="status">
-                  <option hidden >Loại tài khoản</option>
+                  <option hidden (click)="sort('name')">Loại tài khoản</option>
                   <option value="account">Gia sư</option>
                   <option value="account">Học viên</option>
                 </select>
@@ -13,7 +13,7 @@
         </div>
         <div class="col-6">
             <form class="d-flex ">
-                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="name" name="ten" (ngModelChange)="Search()">
             </form>
         </div>
     </div>
@@ -29,7 +29,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let l of learners">
+                <tr *ngFor="let l of learners| orderBy: key: reverse">
                     <td class="text-center">{{l.TutorManage.UserID}}</td>
                     <td class="text-center">{{l.TutorManage.Role}}</td>
                     <td>{{l.TutorInfo.Name}}</td>
@@ -41,7 +41,7 @@
 
                     </td>
                 </tr>
-                <tr *ngFor="let t of tutors">
+                <tr *ngFor="let t of tutors|filter:name">
                     <td class="text-center">{{t.LearnerManage.UserID}}</td>
                     <td class="text-center">{{t.LearnerManage.Role}}</td>
                     <td>{{t.LearnerInfo.Name}}</td>

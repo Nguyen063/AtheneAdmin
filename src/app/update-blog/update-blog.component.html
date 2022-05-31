@@ -5,7 +5,7 @@
         </div>
         <div class="col-6">
             <form class="d-flex ">
-                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                <input class="form-control" type="text" name="name" placeholder="Search" aria-label="Search" [(ngModel)]="name" name="ten" (ngModelChange)="Search()">
             </form>
             <div class="container-fluid btn-right">
                 <!-- Button trigger modal -->
@@ -84,8 +84,8 @@
         </div>
     </div>
     <div class="row container--blogs container-fluid text-center">
-        <div class="row blog-box" >
-            <div class=" col-md-3 blog-content blogs--item" *ngFor="let p of blogs " class="{{isSelect(p) ? 'selected' : ''}} " (click)="onSelect(p) ">
+        <div class="row blog-box">
+            <div class=" col-md-3 blog-content blogs--item" *ngFor="let p of blogs|filter:name " class="{{isSelect(p) ? 'selected' : ''}} " (click)="onSelect(p) ">
                 <div style="height: 80%">
                     <p style=" min-height: 9vw;" class="text-center"><img class="img blog-img" src="http://localhost:3000/{{p.thumbPath}} "></p>
                     <div class="fw-bold title text-truncate">{{p.name}}</div>
