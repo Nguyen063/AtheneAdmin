@@ -4,6 +4,14 @@
     justify-content: space-between;
 }
 
+.content-des{
+    font-size: 80%;
+}
+
+.row{
+    --bs-gutter-x: 0;
+}
+
 .btn {
     background-color: #0077C0;
     margin-left: auto;
@@ -13,14 +21,17 @@
     font-weight: 500;
 }
 
+
 .btn--0 {
-    width: 150px;
+    width: 25%;
+    min-width: 80px;
     color: white;
     font-weight: 700;
-    border-radius: 20px;
-    font: roboto;
+    border-radius: 10px;
     background-color: #17D482;
     border: none;
+    margin-left: 10px;
+    font-size: 13px;
 }
 
 .btn--1:hover {
@@ -73,6 +84,10 @@ ul {
     border-radius: 0.4rem;
     padding: 5px;
     height: 35px;
+}
+
+.table>thead{
+    vertical-align: middle;
 }
 
 h5 {

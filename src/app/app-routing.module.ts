@@ -1,5 +1,4 @@
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { FeedbackComponent } from './feedback/feedback.component';
 import { UpdateBlogComponent } from './update-blog/update-blog.component';
 import { NewClassComponent } from './new-class/new-class.component';
 import { NewAccountComponent } from './new-account/new-account.component';
@@ -45,9 +44,7 @@ const routes: Routes = [
   {
     path:'update-website', component: UpdateWebsiteComponent
   },
-  {
-    path:'feedback', component:FeedbackComponent
-  },
+  
   {
     path:'user-manager/info-learner/:id', component: InforLearnerComponent
   },
@@ -68,4 +65,4 @@ export class AppRoutingModule { }
 export const Routingcomonents={ClassManagermentComponent, HomeComponent,
    NewAccountComponent, NewClassComponent,TransationManagermentComponent,
     UpdateBlogComponent,UpdateWebsiteComponent, UserManagementComponent,
-  FeedbackComponent, InforLearnerComponent,InforTutorComponent, ClassDetailComponent, DashboardComponent}
+  InforLearnerComponent,InforTutorComponent, ClassDetailComponent, DashboardComponent}

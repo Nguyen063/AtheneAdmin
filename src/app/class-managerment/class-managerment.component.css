@@ -1,23 +1,8 @@
-table {
-    /* vertical-align: middle; */
-    text-align: center;
-}
-
 .button-container {
     display: flex;
     flex-wrap: no-wrap;
     justify-content: space-around;
     width: 40vw;
-}
-
-.btn--0 {
-    width: 150px;
-    color: white;
-    font-weight: 700;
-    border-radius: 20px;
-    font: roboto;
-    background-color: #17D482;
-    border: none;
 }
 
 .btn_view--detail {
@@ -27,50 +12,19 @@ table {
     color: blue;
 }
 
-.btn_dropdown {
-    background-color: rgba(255, 255, 255, 0);
-    border: none;
-    font-weight: 500;
-}
-
 ul {
     list-style-type: none;
     margin-left: 0;
     line-height: 30px;
 }
 
-.Information--1 {
-    display: flex;
-    width: 100%;
-    justify-content: flex-start;
-    /* padding: 20px; */
-}
-
-.Information--item {
-    width: auto;
-}
-
-.img-pop-up {
-    width: 120px;
-    height: 150px;
-    margin-left: 30px;
-}
-
 .form-control {
     max-width: 220px;
-    margin-right: 0rem;
-    margin-left: auto;
     background-color: #B2CDE2;
-    border-radius: 0.4rem;
-    padding: 5px;
-    height: 35px;
 }
+
 
 h5 {
     line-height: 50px;
 }
 
-
-/* .profile--1 {
-margin-left: 20px;
-} */

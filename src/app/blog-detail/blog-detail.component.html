@@ -1,12 +1,12 @@
-<div class="blog-right" style="margin-top: 1.5rem; margin-left: 2rem;">
+<div class="blog-right" style="margin-top: 2em; margin-left: 2rem;">
     <div *ngFor="let b of blogs">
         <div [class.d-none]="b.id==selectedId?false:true">
             <form #blogForm="ngForm">
-                <h2 class="text-center mb-1">{{b.name}}</h2>
+                <h3 class="text-center mb-1 pt-3" >{{b.name}}</h3>
                 <span id="author" class="mt-0 fw-bold">Tác giả: {{b.author}}</span> <br>
                 <p>{{b.content}}</p>
                 <h4>{{b.title1}}</h4>
-                <img class="kichthuoc" src="http://localhost:3000/{{b.thumbPath}}">
+                <img class="kichthuoc text-center" src="http://localhost:3000/{{b.thumbPath}}">
                 <p>{{b.content1}}</p>
                 <h4>{{b.title2}}</h4>
                 <img class="kichthuoc" src="http://localhost:3000/{{b.thumbPath1}}">

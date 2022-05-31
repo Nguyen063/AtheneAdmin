@@ -11,7 +11,6 @@ import { NewAccountComponent } from './new-account/new-account.component';
 import { NewClassComponent } from './new-class/new-class.component';
 import { UpdateWebsiteComponent } from './update-website/update-website.component';
 import { UpdateBlogComponent } from './update-blog/update-blog.component';
-import { FeedbackComponent } from './feedback/feedback.component';
 import { InforTutorComponent } from './infor-tutor/infor-tutor.component';
 import { InforLearnerComponent } from './infor-learner/infor-learner.component';
 import { ClassDetailComponent } from './class-detail/class-detail.component';
@@ -33,7 +32,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     NewClassComponent,
     UpdateWebsiteComponent,
     UpdateBlogComponent,
-    FeedbackComponent,
     InforTutorComponent,
     InforLearnerComponent,
     ClassDetailComponent,

@@ -15,7 +15,6 @@
                     <span>Chi</span>
                     <select>
                       <option></option>
-                      <option>Chi</option>
                     </select>
                 </div>
             </div>
@@ -26,9 +25,6 @@
     <div>
         <div>
             <div class="sidebar">
-                <div class="btn-menu">
-                    <span (click)="RpMenu()"><i class="fas fa-bars"></i></span>
-                </div>
                 <!-- Dashboard -->
                 <div>
                     <div>
@@ -48,9 +44,6 @@
                         </li>
                         <li class="list-group-item">
                             <span routerLink="/transation-managerment" routerLinkActive="active">Giao dịch</span>
-                        </li>
-                        <li class="list-group-item">
-                            <span routerLink="/feedback" routerLinkActive="active">Feedback</span>
                         </li>
                     </ul>
                 </div>
@@ -88,7 +81,10 @@
                 </div>
             </div>
             <div class="content" [ngStyle]="{'margin-top': '3rem'}">
-                <div>
+                <div class="btn-menu">
+                    <span (click)="RpMenu()"><i class="fas fa-chevron-right"></i></span>
+                </div>
+                <div [ngStyle]="{'padding': '1.5rem 0 0 0.5rem'}">
                     <router-outlet></router-outlet>
                 </div>
             </div>

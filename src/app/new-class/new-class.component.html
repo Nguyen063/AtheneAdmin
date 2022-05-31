@@ -1,48 +1,50 @@
 <div class="container">
     <div class="row">
-
         <div class="col-6">
-            <h5>Xét duyệt yêu cầu tạo lớp mới</h5>
-            <div class="button-container">
-                <button type="button" class="btn--0 btn--1">Delete</button>
-                <button type="button" class="btn--0 btn--2">Confirm</button>
-                <button type="button" class="btn--0 btn--3">Choose All</button>
-            </div>
+            <h5>Yêu cầu tạo lớp mới</h5>
         </div>
         <div class="col-6">
             <form class="d-flex ">
                 <input class="form-control" type="search" placeholder="Search" aria-label="Search">
             </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="button-container col-5">
+            <button type="button" class="btn--0 btn--1">Delete</button>
+            <button type="button" class="btn--0 btn--2">Confirm</button>
+            <button type="button" class="btn--0 btn--3">Choose All</button>
+        </div>
+        <div class="col-7" style="float: right;">
             <div class="button-container">
-                <button type="button" class="btn"><span style="font-weight: 500">8 </span> &nbsp; Yêu cầu chờ được duyệt</button>
+                <button type="button" class="btn"><span style="font-weight: 500">8 </span> <span class="content-des">Yêu cầu chờ được duyệt</span> </button>
             </div>
         </div>
     </div>
     <div class="row">
         <table class="table">
             <thead>
-                <tr>
-                    <th scope="col"> </th>
-                    <th scope="col">ReqID</th>
-                    <th scope="col">Loai TK</th>
-                    <th scope="col">User Req</th>
-                    <th scope="col">User Match</th>
+                <tr class="text-center">
+                    <th scope="col"></th>
+                    <th scope="col">UserID</th>
+                    <th scope="col">Loại TK</th>
+                    <th scope="col">Người yêu cầu</th>
+                    <th scope="col">Ngày gửi</th>
+                    <th scope="col">View</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <tr class="text-center">
                     <td>
-                        <input type="checkbox" />
+                        <input type="checkbox"/>
                     </td>
                     <td>ID</td>
-                    <td>Gia su</td>
+                    <td >Gia su</td>
                     <td>Huong Ham Chi</td>
-                    <td>10</td>
-                    <td>
-                        <button type="button" class="btn--0" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                       Acceppt
-                </button>
-
+                    <td >01/01/2022</td>
+                    <td >
+                        <button type="button" class="btn_view--detail" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            View Detail</button>
                     </td>
                     <td>
                         <button type="button" class="btn_view--detail" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
