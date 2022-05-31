@@ -22,8 +22,8 @@
     <div class="row container-fluid">
 
         <!-- Hộp feedback -->
-        <div class="" *ngFor="let f of feedbacks">
-            <div class="container--user">
+        <div class="">
+            <div class="container--user" *ngFor="let f of feedbacks">
                 <div>
                     <p class="p--1 mt-2">{{f.Name}}</p>
                     <p class="p--2">{{f.DateSend|date:"dd/MM/yyyy"}}</p>
@@ -38,6 +38,8 @@
                     </div>
                 </div>
             </div>
+
+
         </div>
 
     </div>
