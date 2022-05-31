@@ -96,6 +96,7 @@ export class Tutor{
         LearnerManage=Object({
            UserID: String,
            TotalClass: String,
+           CreateAt:Date,
            ClassID: String,
            Role: String,
             })
@@ -133,6 +134,7 @@ export class Tutor{
              this.LearnerManage.TotalClass="";
              this.LearnerManage.ClassID="";
              this.LearnerManage.Role="";
+             this.LearnerManage.CreateAt="";
 
              this.TransLearner.TransID="";
         this.TransLearner.DateCreate="";

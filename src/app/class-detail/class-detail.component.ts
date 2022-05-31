@@ -10,6 +10,7 @@ import { TransactionService } from '../service/transaction.service';
 })
 export class ClassDetailComponent implements OnInit {
   selectedId: any;
+  selectedId1: any;
   classManages:any;
   transactions:any;
   errMessage: string=""
@@ -22,6 +23,15 @@ export class ClassDetailComponent implements OnInit {
         let id=param.get('id')
         if(id!=null){
           this.selectedId= id;
+        }
+      }
+    )
+
+    this._activatedRouter.paramMap.subscribe(
+      (param)=>{
+        let id=param.get('UserID')
+        if(id!=null){
+          this.selectedId1= id;
         }
       }
     )
@@ -42,5 +52,19 @@ export class ClassDetailComponent implements OnInit {
   }
   goBack(): void {
     this._router.navigate(['/class-manager', { id: this.selectedId }])
+  }
+
+  onSelectLearner(data:any):void{
+    this._router.navigate(['/class-manager/info-learner', data.id])
+  }
+
+   onSelectTutor(data:any):void{
+    this._router.navigate(['/class-manager/info-tutor', data.id])
+  }
+  isSelect(data:any){
+    return data.id===this.selectedId;
+  }
+  isSelect1(data:any){
+    return data.id===this.selectedId1;
   }
 }

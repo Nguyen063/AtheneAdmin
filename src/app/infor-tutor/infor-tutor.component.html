@@ -1,14 +1,13 @@
-<div class="container" *ngFor="let l of learners">
+<div class="container">
+    <div style="background-color: #E0EFFF;" *ngFor="let l of learners">
     <div [class.d-none]="l.id==selectedId?false:true">
         <div class="row">
             <h5 style="text-align:center">THÔNG TIN GIA SƯ</h5>
-            <div class="col-4">
+            <div class="col-3">
                 <div class="container-fluid">
                     <img class="img-tutor" src="http://localhost:3000/{{l.TutorInfo.Ava}}">
                 </div>
-
             </div>
-
             <div class="col-4">
                 <div class="">
                     <ul>
@@ -32,7 +31,6 @@
                         <br/>
                         <li>Giới tính: <span class="fnm">{{l.TutorInfo.Gender}}</span></li>
                         <br/> <br/>
-
                     </ul>
                     <ul>
                         <li>SĐT: <span class="fnm">{{l.TutorInfo.PhoneNumber}}</span></li>
@@ -95,7 +93,8 @@
 
                 </tbody>
             </table>
-            <button type="submit" class="btn-history">Lịch sử giao dịch</button>
+            <!-- <button type="submit" class="btn-history">Lịch sử giao dịch</button> -->
         </div>
     </div>
+</div>
 </div>

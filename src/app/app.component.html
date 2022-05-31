@@ -84,7 +84,7 @@
                 <div class="btn-menu">
                     <span (click)="RpMenu()"><i class="fas fa-chevron-right"></i></span>
                 </div>
-                <div>
+                <div [ngStyle]="{'padding': '1.5rem 0 0 0.5rem'}">
                     <router-outlet></router-outlet>
                 </div>
             </div>
