@@ -15,9 +15,9 @@ export class NewClassComponent implements OnInit {
 learners: any;
 tutors:any;
 errMessage: string="";
-confirm:boolean=true;
-  close:boolean=true;
-  confirm1:boolean=true;
+detail:boolean=true;
+
+
 
   ngOnInit(): void {
     this.getLearner();
@@ -35,16 +35,10 @@ confirm:boolean=true;
       error : err=> this.errMessage=err
     })
    }
-   onSelectLearner(data:any):void{
-    this._router.navigate(['/new-class/forLearner', data.id])
-  }
+  
 
-   onSelectTutor(data:any):void{
-    this._router.navigate(['/new-class/forTutor', data.id])
-  }
-  isSelect(data:any){
-    return data.id===this.selectedId;
-  }
+
+ 
   openConfirm(){
     this.confirm=!this.confirm;
   }
@@ -54,7 +48,4 @@ confirm:boolean=true;
  
   }
 
-  openConfirm1(){
-    this.confirm1=!this.confirm1;
-  }
 }
