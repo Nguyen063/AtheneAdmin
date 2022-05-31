@@ -53,7 +53,7 @@ const routes: Routes = [
   },
   {
     path:'class-manager/:id', component : ClassDetailComponent
-  },
+  }
 ];
 
 @NgModule({

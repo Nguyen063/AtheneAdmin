@@ -34,16 +34,35 @@
                 </tr>
             </thead>
             <tbody>
-                <tr class="text-center">
+                <tr class="text-center" *ngFor="let l of learners">
                     <td>
-                        <input type="checkbox"/>
+                        <input type="checkbox" />
                     </td>
-                    <td>ID</td>
-                    <td >Gia su</td>
-                    <td>Huong Ham Chi</td>
-                    <td >01/01/2022</td>
-                    <td >
+                    <td>{{l.TutorManage.UserID}}</td>
+                    <td>{{l.TutorManage.Role}}</td>
+                    <td>{{l.TutorInfo.Name}}</td>
+                    <td>{{l.TutorManage.CreatedAt|date:"dd/MM/yyyy"}}</td>
+                    <td>
+                        <button type="button" class="btn_view--detail" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="{{isSelect(l) ? 'selected' : ''}} " (click)="onSelectTutor(l)" (click)="openConfirm()">
+                            View Detail</button>
+                    </td>
+                    <td>
                         <button type="button" class="btn_view--detail" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                          <i class="bi bi-trash-fill"></i>
+              </button>
+                    </td>
+                </tr>
+
+                <tr class="text-center" *ngFor="let t of tutors">
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>{{t.LearnerManage.UserID}}</td>
+                    <td>{{t.LearnerManage.Role}}</td>
+                    <td>{{t.LearnerInfo.Name}}</td>
+                    <td>{{t.LearnerManage.CreatedAt|date:"dd/MM/yyyy"}}</td>
+                    <td>
+                        <button type="button" class="btn_view--detail" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="{{isSelect(t) ? 'selected' : ''}} " (click)="onSelectTutor(t)">
                             View Detail</button>
                     </td>
                     <td>
@@ -54,5 +73,52 @@
                 </tr>
             </tbody>
         </table>
+    </div>
+</div>
+
+<div id="myConfirmation" class="confirmation" [class.d-none]="confirm">
+    <div class="confirmation-content" *ngFor="let l of learners">
+        <span (click)="openConfirm()" class="close">&times;</span>
+        <div> <label>Nguời gửi yêu cầu:</label>
+            <div class="col-4">
+                <ul>
+                    <li>Họ và tên: <span class="fnm">{{l.TutorInfo.Name}}</span></li>
+                    <li>Ngày sinh: <span class="fnm">{{l.TutorInfo.DOB|date:"dd/MM/yyyy"}}</span></li>
+                    <li>Địa chỉ: <span class="fnm">{{l.TutorInfo.Direct}}</span></li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <ul>
+                    <li><br></li>
+                    <li>Giới tính: <span class="fnm">{{l.TutorInfo.Gender}}</span></li>
+                    <li>CCCD: <span class="fnm">{{l.TutorInfo.CCCD}}</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div> <label>Mô tả yêu cầu:</label>
+            <div class="col-4">
+                <ul>
+                    <li>Môn dạy: <span class="fnm">{{l.LearnerFinding.Subject}}</span></li>
+                    <li>Cấp học: <span class="fnm">{{l.LearnerFinding.Caphoc}}</span></li>
+                    <li>Địa điểm dạy: <span class="fnm">{{l.LearnerFinding.Location}}</span></li>
+                    <p></p>
+                    <li>Thời gian dạy: <span class="fnm">{{l.LearnerFinding.TeachingTime}}</span></li>
+                    <li>Lịch dạy dự kiến: <span class="fnm">{{l.LearnerFinding.Schedule}}</span></li>
+                    <li>Mức lương mong muốn: <span class="fnm">{{l.LearnerFinding.Fee}}</span></li>
+                    <li>Mô tả thêm: <span class="fnm">{{l.LearnerFinding.Other}}</span></li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <ul>
+                    <li><br></li>
+                    <li>Giới tính: <span class="fnm">{{l.LearnerFinding.LearnerGender}}</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="confirm-container">
+            <button (click)="openConfirm()" class="confirm-btn">Hủy</button>
+            <button id="btn-yes" (click)="clickYes()" class="confirm-btn">Chấp nhận</button>
+        </div>
     </div>
 </div>
