@@ -1,4 +1,4 @@
-<div class="container" *ngFor="let t of tutors">
+<!-- <div class="container" *ngFor="let t of tutors">
     <div [class.d-none]="t.id==selectedId?false:true">
         <div class="row">
             <h5 style="text-align:center">THÔNG TIN HỌC VIÊN</h5>
@@ -6,9 +6,7 @@
                 <div class="container-fluid">
                     <img class="img-tutor" src="http://localhost:3000/{{t.LearnerInfo.Ava}}">
                 </div>
-
             </div>
-
             <div class="col-4">
                 <div class="">
                     <ul>
@@ -81,10 +79,119 @@
                         <td>{{t.TransLearner.SendAcc}}</td>
                         <td>{{t.TransLearner.Content}}</td>
                     </tr>
-
                 </tbody>
             </table>
-            <!-- <button type="submit" class="btn-history">Lịch sử giao dịch</button> -->
         </div>
     </div>
+</div> -->
+<!-- Test giao diện -->
+<div class="container" *ngFor="let t of tutors">
+    <div style="background-color: #E0EFFF">
+    <div [class.d-none]="t.id==selectedId?false:true">
+        <div class="col-row--2" >
+        <div class="row">
+            <h5 style="text-align:center">THÔNG TIN HỌC VIÊN</h5>
+        </div>
+        <div class="row">
+            <div class="col-3" style="display: block">
+                <div>
+                    <img class="img-tutor" src="http://localhost:3000/{{t.LearnerInfo.Ava}}">
+                </div>
+            </div>
+            <div class="col-9">
+                <!-- row 1 -->
+                <div class="row">
+                    <div class="col-12">
+                        <p>UserID: <span class="fnm">{{t.LearnerManage.UserID}}</span></p>
+                    </div>
+                </div>
+                <!-- row 2 -->
+                <div class="row">
+                    <div class="col-7">
+                        <p>Họ và tên: <span class="fnm">{{t.LearnerInfo.Name}}</span></p>
+                    </div>
+                    <div class="col-5">
+                        <p>Giới tính: <span class="fnm">{{t.LearnerInfo.Gender}}</span></p>
+                    </div>
+                </div>
+                <!-- row 3 -->
+                <div class="row">
+                    <div class="col-7">
+                        <p>Ngày sinh: <span class="fnm">{{t.LearnerInfo.DOB|date:"dd/MM/yyyy"}}</span></p>
+                    </div>
+                    <div class="col-5">
+                        <p>SĐT: <span class="fnm">{{t.LearnerInfo.PhoneNumber}}</span></p>
+                    </div>
+                </div>
+                <!-- row 4 -->
+                <div class="row">
+                    <div class="col-12">
+                        <p>Địa chỉ: <span class="fnm">{{t.LearnerInfo.Direct}}</span></p>
+                    </div>
+                </div>
+                <!-- row 5 -->
+                <div class="row">
+                    <div class="col-12">
+                        <p>CCCD: <span class="fnm">{{t.LearnerInfo.CCCD}}</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>         
+    </div>
+
+        <!-- column down -->
+        <div class="row">
+            <div class="col-6 col-row--2">
+                <h5 style="padding-left: 1rem">Gia sư cần tìm:</h5>
+                <ul>
+                    <li>Nghề nghiệp: <span class="fnm">{{t.TutorFinding.Level}}</span></li>
+                    <li>Môn học: <span class="fnm">{{t.TutorFinding.Subject}}</span></li>
+                    <li>Giới tính: <span class="fnm">{{t.TutorFinding.TutorGender}}</span></li>
+                    <li>Lớp dạy: <span class="fnm">{{t.TutorFinding.class}}</span></li>
+                    <li>Địa điểm dạy: <span class="fnm">{{t.TutorFinding.Location}}</span></li>
+                </ul>
+                <ul>
+                    <li>Yêu cầu: <span class="fnm">{{t.TutorFinding.Request}}</span></li>
+                    <li>Thời gian dạy: <span class="fnm">{{t.TutorFinding.TeachingTime}}</span></li>
+                    <li>Mức lương mong muốn: <span class="fnm">{{t.TutorFinding.Fee}}</span></li>
+                    <li>Lịch dạy dự kiến: <span class="fnm">{{t.TutorFinding.Schedule}}</span></li>
+                    <li>Mô tả thêm: <span class="fnm">{{t.TutorFinding.Other}}</span></li>
+                </ul>
+            </div>
+            <div class="col-6 col-row--2">
+                <h5 style="padding-left: 1rem">Thông tin tài khoản:</h5>
+                <ul>
+                    <li> Created At: <span class="fnm">{{t.LearnerManage.CreatedAt|date:"dd/MM/yyyy"}}</span></li>
+                    <li> Lượt truy cập tháng này: <span class="fnm"></span></li>
+                    <li> Số lớp đang dạy: <span class="fnm">{{t.LearnerManage.TotalClass}}</span></li>
+                    <li> ClassID: <span class="fnm">{{t.LearnerManage.ClassID}}</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row col-row--2">
+
+            <h5 style="text-align:center">Lịch sử giao dịch</h5>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">TranID</th>
+                        <th scope="col">Ngày</th>
+                        <th scope="col">Số tiền</th>
+                        <th scope="col">TK nhận</th>
+                        <th scope="col">Nội dung GD</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{t.TransLearner.TransID}}</td>
+                        <td>{{t.TransLearner.DateCreate|date:"dd/MM/yyyy"}}</td>
+                        <td>{{t.TransLearner.Fee}}</td>
+                        <td>{{t.TransLearner.SendAcc}}</td>
+                        <td>{{t.TransLearner.Content}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 </div>

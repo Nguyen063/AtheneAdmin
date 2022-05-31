@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
     <div style="background-color: #E0EFFF;" *ngFor="let l of learners">
     <div [class.d-none]="l.id==selectedId?false:true">
         <div class="row">
@@ -93,7 +93,144 @@
 
                 </tbody>
             </table>
-            <!-- <button type="submit" class="btn-history">Lịch sử giao dịch</button> -->
+        </div>
+    </div>
+</div>
+</div> -->
+<!-- Test giao diện -->
+<div class="container">
+    <div style="background-color: #E0EFFF;" *ngFor="let l of learners">
+    <div [class.d-none]="l.id==selectedId?false:true" >
+        <div class="col-row--2">
+        <div class="row">
+            <h5 style="text-align:center">THÔNG TIN GIA SƯ</h5>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <div class="container-fluid">
+                    <img class="img-tutor" src="http://localhost:3000/{{l.TutorInfo.Ava}}">
+                </div>
+            </div>
+            <div class="col-9">
+                 <!-- row 1 -->
+                <div class="row">
+                    <div class="col-12">
+                    <p>UserID: <span class="fnm">{{l.TutorManage.UserID}}</span></p>
+                    </div>
+                </div>
+                 <!-- row 2 -->
+                <div class="row">
+                    <div class="col-7">
+                        <p>Họ và tên: <span class="fnm">{{l.TutorInfo.Name}}</span></p>
+                    </div>
+                    <div class="col-5">
+                        <p>Giới tính: <span class="fnm">{{l.TutorInfo.Gender}}</span></p>
+                    </div>
+                </div>
+                <!-- row 3 -->
+                <div class="row">
+                    <div class="col-12">
+                        <p>Ngày sinh: <span class="fnm">{{l.TutorInfo.DOB|date:"dd/MM/yyyy"}}</span></p>
+                    </div>
+                </div>
+        <!-- row 4 -->
+        <div class="row">
+            <div class="col-12">
+                <p>Địa chỉ: <span class="fnm">{{l.TutorInfo.Direct}}</span></p>
+            </div>
+        </div>
+        <!-- row 5 -->
+        <div class="row">
+            <div class="col-7">
+                <p>CCCD: <span class="fnm">{{l.TutorInfo.CCCD}}</span></p>
+            </div>
+            <div class="col-5">
+                <p>SĐT: <span class="fnm">{{l.TutorInfo.PhoneNumber}}</span></p>
+            </div>
+        </div>
+        <!-- row 6 -->
+        <div class="row">
+            <div class="col-12">
+                <p>SV/Cựu SV trường: <span class="fnm">{{l.TutorInfo.Education}}</span></p>
+            </div>
+        </div>
+        <!-- row 7 -->
+        <div class="row">
+            <div class="col-12">
+                <p>Chuyên ngành: <span class="fnm">{{l.TutorInfo.Major}}</span></p>
+            </div>
+        </div>
+        <!-- row 8 -->
+        <div class="row">
+            <div class="col-12">
+                <p>Kinh nghiệm: <span class="fnm">{{l.TutorInfo.Exp}}</span></p>
+            </div>
+        </div>
+        <!-- row 9 -->
+        <div class="row">
+            <div class="col-12">
+                <p>Bằng cấp khác: <span class="fnm">{{l.TutorInfo.Degree}}</span></p>
+            </div>
+        </div>  
+        </div>
+        </div>
+    </div>
+           <!-- column down -->
+        <div class="row">
+            <div class="col-6 col-row--2">
+                <h5 style="padding-left: 1rem">Học viên hướng đến:</h5>
+                <ul>
+                    <li>Cấp học: <span class="fnm">{{l.LearnerFinding.Caphoc}}</span></li>
+                    <li>Môn học: <span class="fnm">{{l.LearnerFinding.Subject}}</span></li>
+                    <li>Giới tính: <span class="fnm">{{l.LearnerFinding.LearnerGender}}</span></li>
+                    <li>Địa điểm dạy: <span class="fnm">{{l.LearnerFinding.Location}}</span></li>
+                </ul>
+                <ul>
+                    <li>Thời gian dạy: <span class="fnm">{{l.LearnerFinding.TeachingTime}}</span></li>
+                    <li>Mức lương mong muốn: <span class="fnm">{{l.LearnerFinding.Fee}}</span></li>
+                    <li>Lịch dạy dự kiến: <span class="fnm">{{l.LearnerFinding.Schedule}}</span></li>
+                    <li>Mô tả thêm: <span class="fnm">{{l.LearnerFinding.Other}}</span></li>
+                </ul>
+            </div>
+            <div class="col-6 col-row--2">
+                <h5 style="padding-left: 1rem">Thông tin tài khoản:</h5>
+                <ul>
+                    <li> Created At: <span class="fnm">{{l.TutorManage.CreatedAt|date:"dd/MM/yyyy"}}</span></li>
+                    <li> Lượt truy cập tháng này: <span class="fnm"></span></li>
+                    <li> Số lớp đang dạy: <span class="fnm">{{l.TutorManage.TotalClass}}</span></li>
+                    <li> ClassID: <span class="fnm">{{l.TutorManage.ClassID}}</span></li>
+                </ul>
+                <ul>
+                    <li> Thu nhập trung bình/lớp: <span class="fnm"></span></li>
+                    <li> Tổng thu nhập tháng này: <span class="fnm"></span></li>
+                    <li> Tổng thu nhập kiếm được: <span class="fnm"></span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row col-row--2">
+
+            <h5 style="text-align:center">Lịch sử giao dịch</h5>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">TranID</th>
+                        <th scope="col">Ngày</th>
+                        <th scope="col">Số tiền</th>
+                        <th scope="col">TK nhận</th>
+                        <th scope="col">Nội dung GD</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{l.TransTutor.TransID}}</td>
+                        <td>{{l.TransTutor.DateCreate|date:"dd/MM/yyyy"}}</td>
+                        <td>{{l.TransTutor.Fee}}</td>
+                        <td>{{l.TransTutor.ReceivableAcc}}</td>
+                        <td>{{l.TransTutor.Content}}</td>
+                    </tr>
+
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
