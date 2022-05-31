@@ -1,3 +1,5 @@
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { Ng2OrderModule } from 'ng2-order-pipe';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -20,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { BlogDetailComponent } from './blog-detail/blog-detail.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -49,7 +52,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
       progressAnimation:"increasing",
       preventDuplicates: true
 
-    })
+    }),
+    Ng2OrderModule,
+    Ng2SearchPipeModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -11,14 +11,14 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./update-blog.component.css']
 })
 export class UpdateBlogComponent implements OnInit {
-
+  name:any;
   selectedId: any;
   blogs: any;
   errMessage: string="";
   blog: Blog=new Blog();
  file:any=null;
     constructor(private _service: BlogService, private _toast:ToastrService , private _router: Router) { }
-  
+
     ngOnInit(): void {
      this.getBlogs();
 
@@ -41,7 +41,7 @@ export class UpdateBlogComponent implements OnInit {
       else{
         this.file=null;
       }
-   
+
   }
   submitData(form: NgForm){
 
@@ -74,13 +74,26 @@ formBlog.append('thumbPath',this.file);
       this.onReset(form);
       this.getBlogs();
     }
-       
+
       onReset(form?: NgForm){
       if(form)
       form.reset();
       this.blog=new Blog();
       }
+
+  Search(){
+    if(this.name == ""){
+      this.ngOnInit();
+    }
+    else{
+      this.blogs = this.blogs.filter((res: { name: string; }) =>{
+        return res.name.toLocaleLowerCase().match(this.name.toLocaleLowerCase());
+      });
+    }
+  }
+
       }
-      
- 
-  
+
+
+
+
