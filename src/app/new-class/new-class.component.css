@@ -95,6 +95,128 @@ h5 {
 }
 
 
-/* .profile--1 {
-margin-left: 20px;
-} */
+/* Pop up */
+
+.view-detail {
+  
+    position: fixed;
+    z-index: 1;
+    padding-top: 10rem;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.confirmation-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 2rem;
+    border: 1px solid #888;
+    width: 40%;
+}
+.detail-title{
+    color: white;
+    background-color: #1689F2;
+    text-align: center;
+    padding: 3px;
+    border-radius: 2rem;
+    margin: 1rem;
+}
+.confirm-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.confirm-btn {
+    width: 6rem;
+    height: 2rem;
+    background-color: #0077C0;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+/* The Close Button */
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 2rem;
+    margin: -1rem 0;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* table with div */
+.container-table{
+    margin-top: 30px;
+}
+.container__item{
+    display: flex;
+}
+.item-checkbox{
+    flex-basis: 1%;
+}
+.item-id{
+    flex-basis: 10%;
+}
+.item-account{
+    flex-basis: 10%;
+}
+.item-request{
+    flex-basis: 12%;
+}
+.item-date{
+    flex-basis: 10%;
+}
+.item-view{
+    flex-basis: 10%;
+}
+.item-delete{
+    flex-basis: 5%;
+}
+@media only screen and (max-width: 1024px) {
+    .container-table{
+        font-size: 15px;
+    }
+    .container-table{
+        margin-top: 30px;
+    }
+    .container__item{
+        display: flex;
+    }
+    .item-checkbox{
+        flex-basis: 1%;
+    }
+    .item-id{
+        flex-basis: 12%;
+    }
+    .item-account{
+        flex-basis: 15%;
+    }
+    .item-request{
+        flex-basis: 30%;
+    }
+    .item-date{
+        flex-basis: 20%;
+    }
+    .item-view{
+        flex-basis: 20%;
+    }
+    .item-delete{
+        flex-basis: 5%;
+    }
+  }
+  @media only screen and (max-width: 1024px) {
+    .container-table{
+        font-size: 12px;
+    }}

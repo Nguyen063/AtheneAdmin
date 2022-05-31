@@ -38,13 +38,13 @@ detail:boolean=true;
   
 
 
- 
-  openConfirm(){
-    this.confirm=!this.confirm;
+
+   viewDetail(){
+    this.detail=!this.detail;
   }
   clickYes(){
     alert("Bạn đã gửi yêu cầu thành công");
-    this.confirm=!this.confirm;
+    this.detail=!this.detail;
  
   }
 
