@@ -118,3 +118,53 @@
                 <button (click)="viewDetail()" class="confirm-btn">Hủy</button>
                 <button id="btn-yes" (click)="clickYes()" class="confirm-btn">Chấp nhận</button>
             </div>
+
+
+
+
+            <div class="view-detail" [class.d-none]="detail">
+                <div class="confirmation-content" *ngFor="let t of tutors.slice(0, 1)">
+                    <span (click)="viewDetail()" class="close">&times;</span>
+                    <div> <label></label>
+                        <h4 class="detail-title">Người gửi yêu cầu:</h4>
+                        <div class="detail">
+                            Họ và tên: {{t.LearnerInfo.Name}}
+                        </div>
+                        <div>
+                            Ngày sinh: {{t.LearnerInfo.DOB|date:"dd/MM/yyyy"}}
+                        </div>
+                        <div>
+                            Địa chỉ: {{t.LearnerInfo.Direct}}
+                        </div>
+                        <div>
+                            Giới tính: {{t.LearnerInfo.Gender}}
+                        </div>
+                        <div>
+                            CCCD:{{t.LearnerInfo.CCCD}}
+                        </div>
+                        <h4 class="detail-title">Mô tả yêu cầu:</h4>
+                        <div>
+                            Môn dạy: {{t.TutorFinding.Subject}}
+                        </div>
+                        <div>
+                            Cấp học: {{t.TutorFinding.Caphoc}}
+                        </div>
+                        <div>
+                            Địa điểm dạy: {{t.TutorFinding.Location}}
+                        </div>
+                        <div>
+                            Thời gian dạy: {{t.TutorFinding.TeachingTime}}
+                        </div>
+                        <div>
+                            Lịch dạy dự kiến: {{t.TutorFinding.Schedule}}
+                        </div>
+                        <div>
+                            Mức lương mong muốn: {{t.TutorFinding.Fee}}
+                        </div>
+                        Mô tả thêm:{{t.TutorFinding.Other}}
+
+                    </div>
+                    <div class="confirm-container">
+                        <button (click)="viewDetail()" class="confirm-btn">Hủy</button>
+                        <button id="btn-yes" (click)="clickYes()" class="confirm-btn">Chấp nhận</button>
+                    </div>

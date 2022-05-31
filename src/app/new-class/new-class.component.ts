@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { ManageService } from '../service/manage.service';
 
@@ -10,7 +10,7 @@ import { ManageService } from '../service/manage.service';
 })
 export class NewClassComponent implements OnInit {
 
-  constructor(private _service: ManageService, private _router: Router, private _toast:ToastrService) { }
+  constructor(private _service: ManageService, private _router: Router, private _toast:ToastrService, private _activatedRouter: ActivatedRoute) { }
 
   selectedId: any;
 learners: any;
@@ -23,6 +23,15 @@ detail:boolean=true;
   ngOnInit(): void {
     this.getLearner();
     this.getTutor();
+
+    this._activatedRouter.paramMap.subscribe(
+      (param)=>{
+        let id=param.get('id')
+        if(id!=null){
+          this.selectedId= id;
+        }
+      }
+    )
   }
   getLearner(){
     this._service.getLearner().subscribe({
@@ -48,7 +57,12 @@ detail:boolean=true;
     this.detail=!this.detail;
  
   }
-
+  onSelect(data:any):void{
+    this._router.navigate(['/new-class', data.id])
+  }
+  isSelect(data:any){
+    return data.id===this.selectedId;
+  }
   delete(id:any){
     if(confirm("Are you sure you want to delete this product?")== true){
     this._service.delete(id).subscribe(res=>{
