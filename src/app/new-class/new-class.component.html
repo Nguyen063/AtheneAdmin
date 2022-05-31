@@ -21,100 +21,100 @@
             </div>
         </div>
     </div>
-<div class="container-table">
-    <div class="container__item">
-        <div class="col-1 "></div>
-        <div class="col-1 fw-bold text-center">UserID</div>
-        <div class="col-1 fw-bold text-center ">Loại TK</div>
-        <div class="col-2 fw-bold text-center">Người yêu cầu</div>
-        <div class="col-2 fw-bold text-center">Ngày gửi</div>
-        <div class="col-2 fw-bold text-center">View</div>
-        <div class="col-1"></div>
-    </div>
-
-    <hr  style="width:80%; margin: 0 10%;">
-
-    <div class="container__item" *ngFor="let l of learners,let i=index">
-        <div class="col-1" > 
-            <div style="float: right;">
-                <input type="checkbox" />
-            </div>
+    <div class="container-table">
+        <div class="container__item">
+            <div class="col-1 "></div>
+            <div class="col-1 fw-bold text-center">UserID</div>
+            <div class="col-1 fw-bold text-center ">Loại TK</div>
+            <div class="col-2 fw-bold text-center">Người yêu cầu</div>
+            <div class="col-2 fw-bold text-center">Ngày gửi</div>
+            <div class="col-2 fw-bold text-center">View</div>
+            <div class="col-1"></div>
         </div>
-        <div class="col-1 text-center">{{l.TutorManage.UserID}}</div>
-        <div class="col-1 text-center">{{l.TutorManage.Role}}</div>
-        <div class="col-2">{{l.TutorInfo.Name}}</div>
-        <div class="col-2 text-center">{{l.TutorManage.CreatedAt|date:"dd/MM/yyyy"}}</div>
-        <div class="col-2 text-center"><button type="button" class="btn_view--detail " >
-            View Detail</button></div>
-        <div class="col-1 text-center"><button type="button" class="btn_view--detail" >
-            <i class="bi bi-trash-fill"></i> </button></div>
-    </div>
-    
-    <!--  -->
-    <div class="container__item" *ngFor="let t of tutors">
-        <div class="col-1" > 
-            <div style="float: right;">
-                <input type="checkbox" />
-            </div>
-        </div>
-        <div class="col-1 text-center">{{t.LearnerManage.UserID}}</div>
-        <div class="col-1 text-center">{{t.LearnerManage.Role}}</div>
-        <div class="col-2">{{t.LearnerInfo.Name}}</div>
-        <div class="col-2 text-center">{{t.LearnerManage.CreatedAt|date:"dd/MM/yyyy"}}</div>
-        <div class="col-2 text-center"><button type="button" class="btn_view--detail " >
-            View Detail</button></div>
-        <div class="col-1 text-center"><button type="button" class="btn_view--detail" >
-            <i class="bi bi-trash-fill"></i> </button></div>
-        <div class="item-id text-center"></div>
-        
-    </div>
-</div>
 
-<!-- View detail -->
-  
-<div class="view-detail" [class.d-none]="detail">
-    <div class="confirmation-content" *ngFor="let l of learners.slice(0, 1)">
-        <span (click)="viewDetail()" class="close">&times;</span>
-        <div> <label></label>
-            <h4 class="detail-title">Người gửi yêu cầu:</h4>
-            <div class="detail">
-                Họ và tên: {{l.TutorInfo.Name}}
+        <hr style="width:80%; margin: 0 10%;">
+
+        <div class="container__item" *ngFor="let l of learners,let i=index">
+            <div class="col-1">
+                <div style="float: right;">
+                    <input type="checkbox" />
+                </div>
             </div>
-            <div>
-                Ngày sinh: {{l.TutorInfo.DOB|date:"dd/MM/yyyy"}}
+            <div class="col-1 text-center">{{l.TutorManage.UserID}}</div>
+            <div class="col-1 text-center">{{l.TutorManage.Role}}</div>
+            <div class="col-2">{{l.TutorInfo.Name}}</div>
+            <div class="col-2 text-center">{{l.TutorManage.CreatedAt|date:"dd/MM/yyyy"}}</div>
+            <div class="col-2 text-center"><button type="button" class="btn_view--detail ">
+            View Detail</button></div>
+            <div class="col-1 text-center"><button type="button" class="btn_view--detail" (click)="delete(l._id)">
+            <i class="bi bi-trash-fill"></i> </button></div>
+        </div>
+
+        <!--  -->
+        <div class="container__item" *ngFor="let t of tutors">
+            <div class="col-1">
+                <div style="float: right;">
+                    <input type="checkbox" />
+                </div>
             </div>
-            <div>
-                Địa chỉ: {{l.TutorInfo.Direct}}
+            <div class="col-1 text-center">{{t.LearnerManage.UserID}}</div>
+            <div class="col-1 text-center">{{t.LearnerManage.Role}}</div>
+            <div class="col-2">{{t.LearnerInfo.Name}}</div>
+            <div class="col-2 text-center">{{t.LearnerManage.CreatedAt|date:"dd/MM/yyyy"}}</div>
+            <div class="col-2 text-center"><button type="button" class="btn_view--detail ">
+            View Detail</button></div>
+            <div class="col-1 text-center"><button type="button" class="btn_view--detail" (click)="delete(t._id)">
+            <i class="bi bi-trash-fill"></i> </button></div>
+            <div class="item-id text-center"></div>
+
+        </div>
+    </div>
+
+    <!-- View detail -->
+
+    <div class="view-detail" [class.d-none]="detail">
+        <div class="confirmation-content" *ngFor="let l of learners.slice(0, 1)">
+            <span (click)="viewDetail()" class="close">&times;</span>
+            <div> <label></label>
+                <h4 class="detail-title">Người gửi yêu cầu:</h4>
+                <div class="detail">
+                    Họ và tên: {{l.TutorInfo.Name}}
+                </div>
+                <div>
+                    Ngày sinh: {{l.TutorInfo.DOB|date:"dd/MM/yyyy"}}
+                </div>
+                <div>
+                    Địa chỉ: {{l.TutorInfo.Direct}}
+                </div>
+                <div>
+                    Giới tính: {{l.TutorInfo.Gender}}
+                </div>
+                <div>
+                    CCCD:{{l.TutorInfo.CCCD}}
+                </div>
+                <h4 class="detail-title">Mô tả yêu cầu:</h4>
+                <div>
+                    Môn dạy: {{l.LearnerFinding.Subject}}
+                </div>
+                <div>
+                    Cấp học: {{l.LearnerFinding.Caphoc}}
+                </div>
+                <div>
+                    Địa điểm dạy: {{l.LearnerFinding.Location}}
+                </div>
+                <div>
+                    Thời gian dạy: {{l.LearnerFinding.TeachingTime}}
+                </div>
+                <div>
+                    Lịch dạy dự kiến: {{l.LearnerFinding.Schedule}}
+                </div>
+                <div>
+                    Mức lương mong muốn: {{l.LearnerFinding.Fee}}
+                </div>
+                Mô tả thêm:{{l.LearnerFinding.Other}}
+
             </div>
-            <div>
-                Giới tính: {{l.TutorInfo.Gender}}
+            <div class="confirm-container">
+                <button (click)="viewDetail()" class="confirm-btn">Hủy</button>
+                <button id="btn-yes" (click)="clickYes()" class="confirm-btn">Chấp nhận</button>
             </div>
-            <div>
-                CCCD:{{l.TutorInfo.CCCD}}
-            </div>
-            <h4 class="detail-title">Mô tả yêu cầu:</h4>
-            <div>
-                Môn dạy: {{l.LearnerFinding.Subject}}
-            </div>
-            <div>
-                Cấp học: {{l.LearnerFinding.Caphoc}}
-            </div>
-            <div>
-                Địa điểm dạy: {{l.LearnerFinding.Location}}
-            </div>
-            <div>
-                Thời gian dạy: {{l.LearnerFinding.TeachingTime}}
-            </div>
-            <div>
-                Lịch dạy dự kiến: {{l.LearnerFinding.Schedule}}
-            </div>
-            <div>
-                Mức lương mong muốn: {{l.LearnerFinding.Fee}}
-            </div>
-            Mô tả thêm:{{l.LearnerFinding.Other}}
-           
-            </div>
-<div class="confirm-container">
-    <button (click)="viewDetail()" class="confirm-btn">Hủy</button>
-    <button id="btn-yes" (click)="clickYes()" class="confirm-btn">Chấp nhận</button>
-</div>

@@ -30,7 +30,10 @@ export class ManageService {
   handleError(error:HttpErrorResponse){
     return throwError(()=>{new Error(error.message)})
   }
-  
+  delete(id:any){
+    return this._http.delete(`${baseUrl}/new-class/${id}`);
+     
+  }
 }
 
 
